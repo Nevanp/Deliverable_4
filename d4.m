@@ -6,8 +6,21 @@ hsrrc_rx = rcosdesign(0.12,32,4)/3.8144;
 w = kaiser(113, 2);
 hsrrc_tx = rcosdesign(0.08,28,4).*w';
 hsrrc_tx = hsrrc_tx/1.5;
-H_hat_tx = freqz(hsrrc_tx,1,2*pi*f);
-h_d = conv(hsrrc_rx,hsrrc_tx);
+
+mer = 0;
+mmax = 100;
+for M = 2:1:50
+    for bet = 0:0.1:10
+    n = 0:M;
+
+lpf = 2.*1/4.*sinc(2.*1/4.*(n-M/2));
+w2 = kaiser(M+1,bet);
+upconv = lpf.*w2';
+h1 = conv(upsample(hsrrc_tx,2),upconv);
+h2 = conv(upsample(h1,2),upconv);
+h3 = conv(h2,upconv);
+h4 = conv(downsample(h3,2),upconv);
+h_d = conv(downsample(h4,2),hsrrc_rx);
 figure(1)
 stem(h_d);
 
@@ -18,4 +31,12 @@ err = 0;
     err = err-max(abs(h_d).^2);
     MER_cur = max(abs(h_d).^2)/err;
     MER_cur = 10*log10(MER_cur);
-
+    if MER_cur > 39
+    if M < mmax
+        mer = MER_cur;
+        mmax = M;
+        bet_use = bet;
+    end
+    end
+end
+end
