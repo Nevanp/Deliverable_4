@@ -9,28 +9,28 @@ hsrrc_tx = hsrrc_tx/1.5;
 
 mer = 0;
 mmax = 100;
-for M = 2:1:50
-    for bet = 0:0.1:10
+for M = 2
+ for bet = 6.6
     n = 0:M;
 
 lpf = 2.*1/4.*sinc(2.*1/4.*(n-M/2));
 w2 = kaiser(M+1,bet);
 upconv = lpf.*w2';
-h1 = conv(upsample(hsrrc_tx,2),upconv);
+h1 = conv(hsrrc_tx,upconv);
 h2 = conv(upsample(h1,2),upconv);
 h3 = conv(h2,upconv);
 h4 = conv(downsample(h3,2),upconv);
-h_d = conv(downsample(h4,2),hsrrc_rx);
+h_d = conv(h4,hsrrc_rx);
 figure(1)
 stem(h_d);
 
 err = 0;
-    for i = 0:((length(h_d)-1)/4-1)
-        err = err + (h_d(i*4+1))^2;
+    for i = ((length(h_d)-1)/2+1):4:((length(h_d)))
+        err = err + (h_d(i))^2;
     end
     err = err-max(abs(h_d).^2);
-    MER_cur = max(abs(h_d).^2)/err;
-    MER_cur = 10*log10(MER_cur);
+    MER_cur = max(abs(h_d).^2)/(2*err);
+    MER_cur = 10*log10(MER_cur)
     if MER_cur > 39
     if M < mmax
         mer = MER_cur;
@@ -38,5 +38,5 @@ err = 0;
         bet_use = bet;
     end
     end
-end
+ end
 end
