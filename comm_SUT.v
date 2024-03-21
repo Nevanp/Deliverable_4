@@ -5,6 +5,7 @@ module comm_SUT(
 	 input [3:0] sw,
     input sym_clk,
     input sam_clk,
+    input clk_int,
     input signed [17:0] data_in,
     input reset,
     output reg signed [17:0] data_out
@@ -56,21 +57,80 @@ tx_practical TRANSMITTER(
     .x_in(data_up),
     .y(tx_data)
 );
-gs_tx_filter TRANS(
+
+
+
+wire signed [17:0] up1,half1,up2,half2,down1,half3,down2,half4;
+
+up_sampler_2_1 UP1(
     .clk(clk),
-    .clk_en(sam_clk),
-    //.reset(reset),
-    .x_in(data_up),
-    .y(tx_data1)
+    .sam_clk(sam_clk),
+    .int_clk(clk_int),
+    .reset(reset),
+    .x_in(tx_data),
+    .y(up1)
 );
 
-reg signed [17:0] tx;
+half_band_filter_1 HALF1(
+    .clk(clk),
+    .clk_en(clk_int),
+    .reset(reset),
+    .x_in(up1),
+    .y(half1)
+);
 
-always @ *
-case(sw[3])
-1'b0: tx <= tx_data1;
-1'b1: tx <= tx_data;
-endcase
+up_sampler_2_2 UP2(
+        .clk(clk),
+    .sam_clk(sam_clk),
+    .int_clk(clk_int),
+    .reset(reset),
+    .x_in(half1),
+    .y(up2)
+);
+
+half_band_filter_2 HALF2(
+    .clk(clk),
+    .reset(reset),
+    .x_in(up2),
+    .y(half2)
+);
+
+half_band_filter_2 HALF3(
+    .clk(clk),
+    .reset(reset),
+    .x_in(half2),
+    .y(half3)
+);
+
+down_sampler_2_1 DOWN1(
+    .clk(clk),
+    .reset(reset),
+    .clk_en(clk_int),
+    .x_in(half3),
+    .y(down1)
+);
+
+half_band_filter_1 HALF4(
+    .clk(clk),
+    .clk_en(clk_int),
+    .reset(reset),
+    .x_in(down1),
+    .y(half4)
+);
+reg signed [17:0] half4_delay;
+always @ (posedge clk)
+if(clk_int)
+half4_delay <= half4;
+
+
+down_sampler_2_2 DOWN2(
+    .clk(clk),
+    .reset(reset),
+    .clk_en(sam_clk),
+    .x_in(half4_delay),
+    .y(down2)
+);
+
 
 
 rx_red2 RECEIVER(
@@ -78,7 +138,7 @@ rx_red2 RECEIVER(
     .clk_en(sam_clk),
 	 .sym_clk(sym_clk),
     .reset(reset),
-    .x_in(tx),
+    .x_in(down2),
     .y(rx_data)
 );
 

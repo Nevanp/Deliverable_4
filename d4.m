@@ -9,23 +9,31 @@ hsrrc_tx = hsrrc_tx/1.5;
 
 mer = 0;
 mmax = 100;
-for M = 2
- for bet = 6.6
+for M = 8
+ for bet = 2.98
     n = 0:M;
 
 lpf = 2.*1/4.*sinc(2.*1/4.*(n-M/2));
 w2 = kaiser(M+1,bet);
 upconv = lpf.*w2';
-h1 = conv(hsrrc_tx,upconv);
-h2 = conv(upsample(h1,2),upconv);
-h3 = conv(h2,upconv);
-h4 = conv(downsample(h3,2),upconv);
-h_d = conv(h4,hsrrc_rx);
+h1 = conv(upsample(hsrrc_tx,2)/2,upconv);
 figure(1)
+freqz(h1)
+h2 = conv(upsample(h1,2)/2,upconv);
+figure(2)
+freqz(h2)
+h3 = conv(h2/2,upconv);
+figure(3)
+freqz(h3)
+h4 = conv(downsample(h3,2)/2,upconv);
+figure(4)
+freqz(h4)
+h_d = conv(downsample(h4,2),hsrrc_rx);
+figure(5)
 stem(h_d);
 
 err = 0;
-    for i = ((length(h_d)-1)/2+1):4:((length(h_d)))
+    for i = ceil((length(h_d)-1)/2+1):4:((length(h_d)))
         err = err + (h_d(i))^2;
     end
     err = err-max(abs(h_d).^2);

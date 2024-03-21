@@ -27,7 +27,7 @@ begin
 end
 
 always @ *
-if(int_clk)
+if(sam_clk)
     y <= x_in;
 else
 y<=18'sd0;

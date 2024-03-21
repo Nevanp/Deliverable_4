@@ -1,0 +1,1309 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2023  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 22.1std.2 Build 922 07/20/2023 SC Standard Edition
+# Date created = 17:09:13  March 19, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Deliverable_4_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY Deliverable_4
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.2
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:09:13  MARCH 19, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.2 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_location_assignment PIN_V24 -to ADC_CLK_A
+set_location_assignment PIN_V23 -to ADC_CLK_B
+set_location_assignment PIN_U25 -to ADC_DA[13]
+set_location_assignment PIN_U26 -to ADC_DA[12]
+set_location_assignment PIN_L21 -to ADC_DA[11]
+set_location_assignment PIN_L22 -to ADC_DA[10]
+set_location_assignment PIN_N25 -to ADC_DA[9]
+set_location_assignment PIN_N26 -to ADC_DA[8]
+set_location_assignment PIN_P25 -to ADC_DA[7]
+set_location_assignment PIN_P26 -to ADC_DA[6]
+set_location_assignment PIN_P21 -to ADC_DA[5]
+set_location_assignment PIN_R21 -to ADC_DA[4]
+set_location_assignment PIN_R22 -to ADC_DA[3]
+set_location_assignment PIN_R23 -to ADC_DA[2]
+set_location_assignment PIN_T21 -to ADC_DA[1]
+set_location_assignment PIN_T22 -to ADC_DA[0]
+set_location_assignment PIN_J25 -to ADC_DB[13]
+set_location_assignment PIN_J26 -to ADC_DB[12]
+set_location_assignment PIN_L27 -to ADC_DB[11]
+set_location_assignment PIN_L28 -to ADC_DB[10]
+set_location_assignment PIN_V25 -to ADC_DB[9]
+set_location_assignment PIN_V26 -to ADC_DB[8]
+set_location_assignment PIN_R27 -to ADC_DB[7]
+set_location_assignment PIN_R28 -to ADC_DB[6]
+set_location_assignment PIN_U27 -to ADC_DB[5]
+set_location_assignment PIN_U28 -to ADC_DB[4]
+set_location_assignment PIN_V27 -to ADC_DB[3]
+set_location_assignment PIN_V28 -to ADC_DB[2]
+set_location_assignment PIN_U22 -to ADC_DB[1]
+set_location_assignment PIN_V22 -to ADC_DB[0]
+set_location_assignment PIN_T25 -to ADC_OEB_A
+set_location_assignment PIN_T26 -to ADC_OEB_B
+set_location_assignment PIN_G23 -to DAC_CLK_A
+set_location_assignment PIN_G24 -to DAC_CLK_B
+set_location_assignment PIN_K22 -to DAC_DA[13]
+set_location_assignment PIN_K21 -to DAC_DA[12]
+set_location_assignment PIN_M28 -to DAC_DA[11]
+set_location_assignment PIN_M27 -to DAC_DA[10]
+set_location_assignment PIN_K28 -to DAC_DA[9]
+set_location_assignment PIN_K27 -to DAC_DA[8]
+set_location_assignment PIN_G28 -to DAC_DA[7]
+set_location_assignment PIN_G27 -to DAC_DA[6]
+set_location_assignment PIN_F28 -to DAC_DA[5]
+set_location_assignment PIN_F27 -to DAC_DA[4]
+set_location_assignment PIN_E28 -to DAC_DA[3]
+set_location_assignment PIN_E27 -to DAC_DA[2]
+set_location_assignment PIN_D28 -to DAC_DA[1]
+set_location_assignment PIN_D27 -to DAC_DA[0]
+set_location_assignment PIN_L24 -to DAC_DB[13]
+set_location_assignment PIN_L23 -to DAC_DB[12]
+set_location_assignment PIN_K26 -to DAC_DB[11]
+set_location_assignment PIN_K25 -to DAC_DB[10]
+set_location_assignment PIN_H26 -to DAC_DB[9]
+set_location_assignment PIN_H25 -to DAC_DB[8]
+set_location_assignment PIN_G26 -to DAC_DB[7]
+set_location_assignment PIN_G25 -to DAC_DB[6]
+set_location_assignment PIN_E26 -to DAC_DB[5]
+set_location_assignment PIN_F26 -to DAC_DB[4]
+set_location_assignment PIN_C27 -to DAC_DB[3]
+set_location_assignment PIN_D26 -to DAC_DB[2]
+set_location_assignment PIN_F25 -to DAC_DB[1]
+set_location_assignment PIN_F24 -to DAC_DB[0]
+set_location_assignment PIN_H24 -to DAC_MODE
+set_location_assignment PIN_H23 -to DAC_WRT_A
+set_location_assignment PIN_M25 -to DAC_WRT_B
+set_location_assignment PIN_Y28 -to ADC_OTR_A
+set_location_assignment PIN_Y27 -to ADC_OTR_B
+set_location_assignment PIN_B7 -to I2C_SCLK
+set_location_assignment PIN_A8 -to I2C_SDAT
+set_location_assignment PIN_J27 -to OSC_SMA_ADC4
+set_location_assignment PIN_J28 -to SMA_DAC4
+set_location_assignment PIN_Y2 -to clock_50
+set_location_assignment PIN_B14 -to clock_27
+set_location_assignment PIN_G19 -to LEDR[0]
+set_location_assignment PIN_F19 -to LEDR[1]
+set_location_assignment PIN_E19 -to LEDR[2]
+set_location_assignment PIN_F21 -to LEDR[3]
+set_location_assignment PIN_F18 -to LEDR[4]
+set_location_assignment PIN_E18 -to LEDR[5]
+set_location_assignment PIN_J19 -to LEDR[6]
+set_location_assignment PIN_H19 -to LEDR[7]
+set_location_assignment PIN_J17 -to LEDR[8]
+set_location_assignment PIN_G17 -to LEDR[9]
+set_location_assignment PIN_J15 -to LEDR[10]
+set_location_assignment PIN_H16 -to LEDR[11]
+set_location_assignment PIN_J16 -to LEDR[12]
+set_location_assignment PIN_H17 -to LEDR[13]
+set_location_assignment PIN_F15 -to LEDR[14]
+set_location_assignment PIN_G15 -to LEDR[15]
+set_location_assignment PIN_G16 -to LEDR[16]
+set_location_assignment PIN_H15 -to LEDR[17]
+set_location_assignment PIN_E21 -to LEDG[0]
+set_location_assignment PIN_E22 -to LEDG[1]
+set_location_assignment PIN_E25 -to LEDG[2]
+set_location_assignment PIN_E24 -to LEDG[3]
+set_location_assignment PIN_M23 -to KEY[0]
+set_location_assignment PIN_M21 -to KEY[1]
+set_location_assignment PIN_N21 -to KEY[2]
+set_location_assignment PIN_R24 -to KEY[3]
+set_location_assignment PIN_AB28 -to SW[0]
+set_location_assignment PIN_AC28 -to SW[1]
+set_location_assignment PIN_AC27 -to SW[2]
+set_location_assignment PIN_AD27 -to SW[3]
+set_location_assignment PIN_AB27 -to SW[4]
+set_location_assignment PIN_AC26 -to SW[5]
+set_location_assignment PIN_AD26 -to SW[6]
+set_location_assignment PIN_AB26 -to SW[7]
+set_location_assignment PIN_AC25 -to SW[8]
+set_location_assignment PIN_AB25 -to SW[9]
+set_location_assignment PIN_AC24 -to SW[10]
+set_location_assignment PIN_AB24 -to SW[11]
+set_location_assignment PIN_AB23 -to SW[12]
+set_location_assignment PIN_AA24 -to SW[13]
+set_location_assignment PIN_AA23 -to SW[14]
+set_location_assignment PIN_AA22 -to SW[15]
+set_location_assignment PIN_Y24 -to SW[16]
+set_location_assignment PIN_Y23 -to SW[17]
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to clk -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "mapper_power:MAPPOW_I|mapper_power[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "mapper_power:MAPPOW_I|mapper_power[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "mapper_power:MAPPOW_I|mapper_power[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "mapper_power:MAPPOW_I|mapper_power[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "mapper_power:MAPPOW_I|mapper_power[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "mapper_power:MAPPOW_I|mapper_power[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "mapper_power:MAPPOW_I|mapper_power[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "mapper_power:MAPPOW_I|mapper_power[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "mapper_power:MAPPOW_I|mapper_power[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "mapper_power:MAPPOW_I|mapper_power[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "mapper_power:MAPPOW_I|mapper_power[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "mapper_power:MAPPOW_I|mapper_power[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "mapper_power:MAPPOW_I|mapper_power[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "mapper_power:MAPPOW_I|mapper_power[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "mapper_power:MAPPOW_I|mapper_power[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "mapper_power:MAPPOW_I|mapper_power[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "mapper_power:MAPPOW_I|mapper_power[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "mapper_power:MAPPOW_I|mapper_power[17]" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=1024" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=1024" -section_id auto_signaltap_0
+set_global_assignment -name SDC_FILE Deliverable_4.out.sdc
+set_global_assignment -name VERILOG_FILE upconv.v
+set_global_assignment -name VERILOG_FILE up_sampler_4.v
+set_global_assignment -name VERILOG_FILE up_sampler_2_2.v
+set_global_assignment -name VERILOG_FILE up_sampler_2_1.v
+set_global_assignment -name VERILOG_FILE tx_practical.v
+set_global_assignment -name VERILOG_FILE square_error.v
+set_global_assignment -name VERILOG_FILE slicer.v
+set_global_assignment -name VERILOG_FILE rx_red2.v
+set_global_assignment -name VERILOG_FILE mer_test.v
+set_global_assignment -name VERILOG_FILE mapper_power.v
+set_global_assignment -name VERILOG_FILE lfsr.v
+set_global_assignment -name VERILOG_FILE half_band_filter_2.v
+set_global_assignment -name VERILOG_FILE half_band_filter_1.v
+set_global_assignment -name VERILOG_FILE gs_rx_filter.v
+set_global_assignment -name VERILOG_FILE down_sampler_4.v
+set_global_assignment -name VERILOG_FILE down_sampler_2_2.v
+set_global_assignment -name VERILOG_FILE down_sampler_2_1.v
+set_global_assignment -name VERILOG_FILE Deliverable_4.v
+set_global_assignment -name VERILOG_FILE dc_error.v
+set_global_assignment -name VERILOG_FILE comm_SUT.v
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_location_assignment PIN_Y2 -to CLOCK_50
+set_location_assignment PIN_B14 -to CLOCK_27
+set_location_assignment PIN_M23 -to PHYS_KEY[0]
+set_location_assignment PIN_M21 -to PHYS_KEY[1]
+set_location_assignment PIN_N21 -to PHYS_KEY[2]
+set_location_assignment PIN_R24 -to PHYS_KEY[3]
+set_location_assignment PIN_AB28 -to PHYS_SW[0]
+set_location_assignment PIN_AC28 -to PHYS_SW[1]
+set_location_assignment PIN_AC27 -to PHYS_SW[2]
+set_location_assignment PIN_AD27 -to PHYS_SW[3]
+set_location_assignment PIN_AB27 -to PHYS_SW[4]
+set_location_assignment PIN_AC26 -to PHYS_SW[5]
+set_location_assignment PIN_AD26 -to PHYS_SW[6]
+set_location_assignment PIN_AB26 -to PHYS_SW[7]
+set_location_assignment PIN_AC25 -to PHYS_SW[8]
+set_location_assignment PIN_AB25 -to PHYS_SW[9]
+set_location_assignment PIN_AC24 -to PHYS_SW[10]
+set_location_assignment PIN_AB24 -to PHYS_SW[11]
+set_location_assignment PIN_AB23 -to PHYS_SW[12]
+set_location_assignment PIN_AA24 -to PHYS_SW[13]
+set_location_assignment PIN_AA23 -to PHYS_SW[14]
+set_location_assignment PIN_AA22 -to PHYS_SW[15]
+set_location_assignment PIN_Y24 -to PHYS_SW[16]
+set_location_assignment PIN_Y23 -to PHYS_SW[17]
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "mapper_power:MAPPOW_I|mapper_power[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "mapper_power:MAPPOW_I|mapper_power[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "mapper_power:MAPPOW_I|mapper_power[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "mapper_power:MAPPOW_I|mapper_power[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "mapper_power:MAPPOW_I|mapper_power[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "mapper_power:MAPPOW_I|mapper_power[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "mapper_power:MAPPOW_I|mapper_power[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "mapper_power:MAPPOW_I|mapper_power[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "mapper_power:MAPPOW_I|mapper_power[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "mapper_power:MAPPOW_I|mapper_power[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "mapper_power:MAPPOW_I|mapper_power[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "mapper_power:MAPPOW_I|mapper_power[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "mapper_power:MAPPOW_I|mapper_power[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "mapper_power:MAPPOW_I|mapper_power[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "mapper_power:MAPPOW_I|mapper_power[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "mapper_power:MAPPOW_I|mapper_power[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "mapper_power:MAPPOW_I|mapper_power[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "mapper_power:MAPPOW_I|mapper_power[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "mapper_power:MAPPOW_I|mapper_power[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "mapper_power:MAPPOW_I|mapper_power[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "mapper_power:MAPPOW_I|mapper_power[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "mapper_power:MAPPOW_I|mapper_power[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "mapper_power:MAPPOW_I|mapper_power[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "mapper_power:MAPPOW_I|mapper_power[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "mapper_power:MAPPOW_I|mapper_power[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "mapper_power:MAPPOW_I|mapper_power[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "mapper_power:MAPPOW_I|mapper_power[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "mapper_power:MAPPOW_I|ref_level[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "mapper_power:MAPPOW_I|ref_level[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "mapper_power:MAPPOW_I|ref_level[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "mapper_power:MAPPOW_I|ref_level[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "mapper_power:MAPPOW_I|ref_level[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "mapper_power:MAPPOW_I|ref_level[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "mapper_power:MAPPOW_I|ref_level[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "mapper_power:MAPPOW_I|ref_level[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "mapper_power:MAPPOW_I|ref_level[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "mapper_power:MAPPOW_I|ref_level[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "mapper_power:MAPPOW_I|ref_level[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "mapper_power:MAPPOW_I|ref_level[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "mapper_power:MAPPOW_I|ref_level[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "mapper_power:MAPPOW_I|ref_level[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "mapper_power:MAPPOW_I|ref_level[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "mapper_power:MAPPOW_I|ref_level[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "mapper_power:MAPPOW_I|ref_level[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "mapper_power:MAPPOW_I|ref_level[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "mer_test:MER_I|clear_accum" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[69] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[70] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[71] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[72] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[73] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[74] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[75] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[76] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[77] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[78] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[79] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[80] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[81] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[82] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[83] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[84] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[85] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[86] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[87] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[88] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[89] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[90] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[91] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[92] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[93] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[94] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[95] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[96] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[97] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[98] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[99] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[100] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[101] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[102] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[103] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[104] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[105] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[106] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[107] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[108] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[109] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[110] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[111] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[112] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[113] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[114] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[115] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[116] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[117] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[118] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[119] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[120] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[121] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[122] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[123] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[124] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[125] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[126] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[127] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[128] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[129] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[130] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[131] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[132] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[133] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[134] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[135] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[136] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[137] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[138] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[139] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[140] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[141] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[142] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[143] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[144] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[145] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[146] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[147] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[148] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[149] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[150] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[151] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[152] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[153] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[154] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[155] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[156] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[157] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[158] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[159] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[160] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[161] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[162] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[163] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[164] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[165] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[166] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[167] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[168] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[169] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[170] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[171] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[172] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[173] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[174] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[175] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[176] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[177] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[178] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[179] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[180] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[181] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[182] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[183] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[184] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[185] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[186] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[187] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[188] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[189] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[190] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[191] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[192] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[193] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[194] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[195] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[196] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[197] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[198] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[199] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[200] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[201] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[202] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[203] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[204] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[205] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[206] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[207] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[208] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[209] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[210] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[211] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[212] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[213] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[214] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[215] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[216] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[217] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[218] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[219] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[220] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[221] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[222] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[223] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[224] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[225] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[226] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[227] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[228] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[229] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[230] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[231] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[232] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[233] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[234] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[235] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[236] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[237] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[238] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[239] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[240] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[241] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[242] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[243] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[244] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[245] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[246] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[247] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[248] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[249] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[250] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[251] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[252] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[253] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[254] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[255] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[256] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[257] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[258] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[259] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[260] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[261] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[262] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[263] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[264] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[265] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[266] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[267] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[268] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[269] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[270] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[271] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[272] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[273] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[274] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[275] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[276] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[277] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[278] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[279] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[280] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[281] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[282] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[283] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[284] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[285] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[286] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[287] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[288] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[289] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[290] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[291] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[292] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[293] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[294] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[295] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[296] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[297] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[298] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[299] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[300] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[301] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[302] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[303] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[304] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[305] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[306] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[307] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[308] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[309] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[310] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[311] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[312] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[313] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[314] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[315] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[316] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[317] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[318] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[319] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[320] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[321] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[322] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[323] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[324] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[325] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[326] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[327] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[328] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[329] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[330] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[331] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[332] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[333] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[334] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[335] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[336] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[337] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[338] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[339] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[340] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[341] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[342] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[343] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[344] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[345] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[346] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[347] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[348] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[349] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[350] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[351] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[352] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[353] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[354] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[355] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[356] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[357] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[358] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[359] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[360] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[361] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[362] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[363] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[364] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[365] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[366] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[367] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[368] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[369] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[370] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[371] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[372] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[373] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[374] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[375] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[376] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[377] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[378] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[379] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[380] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[381] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[382] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[383] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[384] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[385] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[386] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[387] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[388] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[389] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[390] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[391] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[392] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[393] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[394] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[395] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[396] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[397] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[398] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[399] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[400] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[401] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[402] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[403] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[404] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[405] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[406] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[407] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[408] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[409] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[410] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[411] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[412] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[413] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[414] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[415] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[416] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[417] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[418] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[419] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[420] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[421] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[422] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[423] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[424] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[425] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[426] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[427] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[428] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[429] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[430] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[431] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[432] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[433] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[434] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[435] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[436] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[437] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[438] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[439] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[440] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[441] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[442] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[443] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[444] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[445] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[446] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[447] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[448] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[449] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[450] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[451] -to "mer_test:MER_I|decision_var[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[452] -to "mer_test:MER_I|decision_var[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[453] -to "mer_test:MER_I|decision_var[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[454] -to "mer_test:MER_I|decision_var[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[455] -to "mer_test:MER_I|decision_var[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[456] -to "mer_test:MER_I|decision_var[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[457] -to "mer_test:MER_I|decision_var[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[458] -to "mer_test:MER_I|decision_var[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[459] -to "mer_test:MER_I|decision_var[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[460] -to "mer_test:MER_I|decision_var[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[461] -to "mer_test:MER_I|decision_var[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[462] -to "mer_test:MER_I|decision_var[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[463] -to "mer_test:MER_I|decision_var[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[464] -to "mer_test:MER_I|decision_var[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[465] -to "mer_test:MER_I|decision_var[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[466] -to "mer_test:MER_I|decision_var[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[467] -to "mer_test:MER_I|decision_var[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[468] -to "mer_test:MER_I|decision_var[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[469] -to "mer_test:MER_I|smp_clk_en" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[470] -to "mer_test:MER_I|sym_clk_en" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[471] -to "square_error:SQERR_I|sq_err_out[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[472] -to "square_error:SQERR_I|sq_err_out[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[473] -to "square_error:SQERR_I|sq_err_out[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[474] -to "square_error:SQERR_I|sq_err_out[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[475] -to "square_error:SQERR_I|sq_err_out[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[476] -to "square_error:SQERR_I|sq_err_out[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[477] -to "square_error:SQERR_I|sq_err_out[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[478] -to "square_error:SQERR_I|sq_err_out[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[479] -to "square_error:SQERR_I|sq_err_out[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[480] -to "square_error:SQERR_I|sq_err_out[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[481] -to "square_error:SQERR_I|sq_err_out[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[482] -to "square_error:SQERR_I|sq_err_out[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[483] -to "square_error:SQERR_I|sq_err_out[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[484] -to "square_error:SQERR_I|sq_err_out[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[485] -to "square_error:SQERR_I|sq_err_out[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[486] -to "square_error:SQERR_I|sq_err_out[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[487] -to "square_error:SQERR_I|sq_err_out[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[488] -to "square_error:SQERR_I|sq_err_out[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[489] -to "square_error:SQERR_I|sq_err_out[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[490] -to "square_error:SQERR_I|sq_err_out[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[491] -to "square_error:SQERR_I|sq_err_out[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[492] -to "square_error:SQERR_I|sq_err_out[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[493] -to "square_error:SQERR_I|sq_err_out[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[494] -to "square_error:SQERR_I|sq_err_out[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[495] -to "square_error:SQERR_I|sq_err_out[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[496] -to "square_error:SQERR_I|sq_err_out[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[497] -to "square_error:SQERR_I|sq_err_out[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[498] -to "square_error:SQERR_I|sq_err_out[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[499] -to "square_error:SQERR_I|sq_err_out[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[500] -to "square_error:SQERR_I|sq_err_out[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[501] -to "square_error:SQERR_I|sq_err_out[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[502] -to "square_error:SQERR_I|sq_err_out[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[503] -to "square_error:SQERR_I|sq_err_out[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[504] -to "square_error:SQERR_I|sq_err_out[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[505] -to "square_error:SQERR_I|sq_err_out[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[506] -to "square_error:SQERR_I|sq_err_out[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[507] -to "square_error:SQERR_I|sq_err_out[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[508] -to "square_error:SQERR_I|sq_err_out[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[509] -to "square_error:SQERR_I|sq_err_out[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "mapper_power:MAPPOW_I|mapper_power[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "mapper_power:MAPPOW_I|mapper_power[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "mapper_power:MAPPOW_I|mapper_power[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "mapper_power:MAPPOW_I|mapper_power[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "mapper_power:MAPPOW_I|mapper_power[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "mapper_power:MAPPOW_I|mapper_power[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "mapper_power:MAPPOW_I|mapper_power[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "mapper_power:MAPPOW_I|mapper_power[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "mapper_power:MAPPOW_I|mapper_power[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "mapper_power:MAPPOW_I|mapper_power[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "mapper_power:MAPPOW_I|mapper_power[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "mapper_power:MAPPOW_I|mapper_power[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "mapper_power:MAPPOW_I|mapper_power[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "mapper_power:MAPPOW_I|mapper_power[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "mapper_power:MAPPOW_I|mapper_power[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "mapper_power:MAPPOW_I|mapper_power[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "mapper_power:MAPPOW_I|mapper_power[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "mapper_power:MAPPOW_I|mapper_power[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "mapper_power:MAPPOW_I|mapper_power[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "mapper_power:MAPPOW_I|mapper_power[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "mapper_power:MAPPOW_I|mapper_power[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "mapper_power:MAPPOW_I|mapper_power[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "mapper_power:MAPPOW_I|mapper_power[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "mapper_power:MAPPOW_I|mapper_power[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "mapper_power:MAPPOW_I|mapper_power[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "mapper_power:MAPPOW_I|mapper_power[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "mapper_power:MAPPOW_I|mapper_power[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "mapper_power:MAPPOW_I|ref_level[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "mapper_power:MAPPOW_I|ref_level[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "mapper_power:MAPPOW_I|ref_level[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "mapper_power:MAPPOW_I|ref_level[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "mapper_power:MAPPOW_I|ref_level[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "mapper_power:MAPPOW_I|ref_level[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "mapper_power:MAPPOW_I|ref_level[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "mapper_power:MAPPOW_I|ref_level[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "mapper_power:MAPPOW_I|ref_level[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "mapper_power:MAPPOW_I|ref_level[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "mapper_power:MAPPOW_I|ref_level[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "mapper_power:MAPPOW_I|ref_level[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "mapper_power:MAPPOW_I|ref_level[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "mapper_power:MAPPOW_I|ref_level[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "mapper_power:MAPPOW_I|ref_level[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "mapper_power:MAPPOW_I|ref_level[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "mapper_power:MAPPOW_I|ref_level[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "mapper_power:MAPPOW_I|ref_level[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "mer_test:MER_I|clear_accum" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[74] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[75] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[76] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[77] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[78] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[79] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[80] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[81] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[82] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[83] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[84] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[85] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[86] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[87] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[88] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[89] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[90] -to "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[91] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[92] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[93] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[94] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[95] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[96] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[97] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[98] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[99] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[100] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[101] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[102] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[103] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[104] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[105] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[106] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[107] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[108] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[0][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[109] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[110] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[111] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[112] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[113] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[114] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[115] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[116] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[117] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[118] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[119] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[120] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[121] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[122] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[123] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[124] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[125] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[126] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[1][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[127] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[128] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[129] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[130] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[131] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[132] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[133] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[134] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[135] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[136] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[137] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[138] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[139] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[140] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[141] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[142] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[143] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[144] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[2][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[145] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[146] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[147] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[148] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[149] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[150] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[151] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[152] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[153] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[154] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[155] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[156] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[157] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[158] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[159] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[160] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[161] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[162] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[3][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[163] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[164] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[165] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[166] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[167] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[168] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[169] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[170] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[171] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[172] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[173] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[174] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[175] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[176] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[177] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[178] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[179] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[180] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[4][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[181] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[182] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[183] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[184] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[185] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[186] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[187] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[188] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[189] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[190] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[191] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[192] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[193] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[194] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[195] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[196] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[197] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[198] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[5][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[199] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[200] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[201] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[202] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[203] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[204] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[205] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[206] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[207] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[208] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[209] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[210] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[211] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[212] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[213] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[214] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[215] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[216] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[6][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[217] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[218] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[219] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[220] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[221] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[222] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[223] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[224] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[225] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[226] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[227] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[228] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[229] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[230] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[231] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[232] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[233] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[234] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[7][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[235] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[236] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[237] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[238] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[239] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[240] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[241] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[242] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[243] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[244] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[245] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[246] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[247] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[248] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[249] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[250] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[251] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[252] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x[8][9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[253] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[254] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[255] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[256] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[257] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[258] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[259] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[260] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[261] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[262] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[263] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[264] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[265] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[266] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[267] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[268] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[269] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[270] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|x_in[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[271] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[272] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[273] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[274] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[275] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[276] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[277] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[278] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[279] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[280] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[281] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[282] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[283] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[284] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[285] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[286] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[287] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[288] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[289] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[290] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[291] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[292] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[293] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[294] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[295] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[296] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[297] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[298] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[299] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[300] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[301] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[302] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[303] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[304] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[305] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[306] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[307] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[308] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[309] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[310] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[311] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[312] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[313] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[314] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[315] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[316] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[317] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[318] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[319] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[320] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[321] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[322] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[323] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[324] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|x_in[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[325] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[326] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[327] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[328] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[329] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[330] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[331] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[332] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[333] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[334] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[335] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[336] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[337] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[338] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[339] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[340] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[341] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[342] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[343] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[344] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[345] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[346] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[347] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[348] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[349] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[350] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[351] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[352] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[353] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[354] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[355] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[356] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[357] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[358] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[359] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[360] -to "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[361] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[362] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[363] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[364] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[365] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[366] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[367] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[368] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[369] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[370] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[371] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[372] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[373] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[374] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[375] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[376] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[377] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[378] -to "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[379] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[380] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[381] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[382] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[383] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[384] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[385] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[386] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[387] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[388] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[389] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[390] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[391] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[392] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[393] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[394] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[395] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[396] -to "mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[397] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[398] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[399] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[400] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[401] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[402] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[403] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[404] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[405] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[406] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[407] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[408] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[409] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[410] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[411] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[412] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[413] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[414] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|x_in[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[415] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[416] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[417] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[418] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[419] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[420] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[421] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[422] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[423] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[424] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[425] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[426] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[427] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[428] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[429] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[430] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[431] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[432] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[433] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[434] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[435] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[436] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[437] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[438] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[439] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[440] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[441] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[442] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[443] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[444] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[445] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[446] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[447] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[448] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[449] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[450] -to "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2|y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[451] -to "mer_test:MER_I|decision_var[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[452] -to "mer_test:MER_I|decision_var[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[453] -to "mer_test:MER_I|decision_var[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[454] -to "mer_test:MER_I|decision_var[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[455] -to "mer_test:MER_I|decision_var[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[456] -to "mer_test:MER_I|decision_var[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[457] -to "mer_test:MER_I|decision_var[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[458] -to "mer_test:MER_I|decision_var[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[459] -to "mer_test:MER_I|decision_var[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[460] -to "mer_test:MER_I|decision_var[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[461] -to "mer_test:MER_I|decision_var[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[462] -to "mer_test:MER_I|decision_var[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[463] -to "mer_test:MER_I|decision_var[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[464] -to "mer_test:MER_I|decision_var[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[465] -to "mer_test:MER_I|decision_var[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[466] -to "mer_test:MER_I|decision_var[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[467] -to "mer_test:MER_I|decision_var[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[468] -to "mer_test:MER_I|decision_var[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[469] -to "mer_test:MER_I|smp_clk_en" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[470] -to "mer_test:MER_I|sym_clk_en" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[471] -to "square_error:SQERR_I|sq_err_out[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[472] -to "square_error:SQERR_I|sq_err_out[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[473] -to "square_error:SQERR_I|sq_err_out[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[474] -to "square_error:SQERR_I|sq_err_out[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[475] -to "square_error:SQERR_I|sq_err_out[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[476] -to "square_error:SQERR_I|sq_err_out[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[477] -to "square_error:SQERR_I|sq_err_out[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[478] -to "square_error:SQERR_I|sq_err_out[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[479] -to "square_error:SQERR_I|sq_err_out[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[480] -to "square_error:SQERR_I|sq_err_out[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[481] -to "square_error:SQERR_I|sq_err_out[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[482] -to "square_error:SQERR_I|sq_err_out[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[483] -to "square_error:SQERR_I|sq_err_out[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[484] -to "square_error:SQERR_I|sq_err_out[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[485] -to "square_error:SQERR_I|sq_err_out[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[486] -to "square_error:SQERR_I|sq_err_out[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[487] -to "square_error:SQERR_I|sq_err_out[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[488] -to "square_error:SQERR_I|sq_err_out[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[489] -to "square_error:SQERR_I|sq_err_out[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[490] -to "square_error:SQERR_I|sq_err_out[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[491] -to "square_error:SQERR_I|sq_err_out[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[492] -to "square_error:SQERR_I|sq_err_out[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[493] -to "square_error:SQERR_I|sq_err_out[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[494] -to "square_error:SQERR_I|sq_err_out[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[495] -to "square_error:SQERR_I|sq_err_out[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[496] -to "square_error:SQERR_I|sq_err_out[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[497] -to "square_error:SQERR_I|sq_err_out[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[498] -to "square_error:SQERR_I|sq_err_out[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[499] -to "square_error:SQERR_I|sq_err_out[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[500] -to "square_error:SQERR_I|sq_err_out[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[501] -to "square_error:SQERR_I|sq_err_out[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[502] -to "square_error:SQERR_I|sq_err_out[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[503] -to "square_error:SQERR_I|sq_err_out[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[504] -to "square_error:SQERR_I|sq_err_out[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[505] -to "square_error:SQERR_I|sq_err_out[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[506] -to "square_error:SQERR_I|sq_err_out[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[507] -to "square_error:SQERR_I|sq_err_out[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[508] -to "square_error:SQERR_I|sq_err_out[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[509] -to "square_error:SQERR_I|sq_err_out[9]" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=510" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=510" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=510" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=1554" -section_id auto_signaltap_0
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp

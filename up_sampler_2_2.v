@@ -20,14 +20,14 @@ always @ *
 
 always @ (posedge clk)
 begin
-    if (reset||sam_clk)
+    if (reset||int_clk)
         counter <= 1'b0;
     else
         counter = counter + 1'b1;
 end
 
 always @ *
-if(clk)
+if(int_clk)
     y <= x_in;
 else
 y<=18'sd0;

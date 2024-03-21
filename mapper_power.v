@@ -4,7 +4,7 @@ module mapper_power(input clk,
     input clear_accum,
 	input signed [17:0] decision_var,
     output reg signed [17:0] mapper_power,
-	output reg signed [17:0] ref_level
+	output reg signed [35:0] ref_level
 );
 
 // setup inter signals
@@ -23,15 +23,15 @@ else
 // square accum output
 always @ (posedge clk)
 if(clear_accum)
-sq_power <= ave_mult*ave_mult;
+sq_power <= ave_mult*ave_mult;// Since squaring 2s16 -> 4s32
 
-// multiply sq_power by 1.25 (2s16) done with addition via bit shift
+// multiply sq_power by 1.25 done with addition via bit shift
 always @ (*)
-scale_mult <= sq_power[35:18]+$signed({{2{sq_power[35]}},sq_power[35:20]});
+scale_mult <= sq_power+$signed({{2{sq_power[35]}},sq_power[35:2]});
 
 // output scale mult
 always @ *
-mapper_power <= scale_mult;
+mapper_power <= scale_mult;//now a 4s32 number so divide by 2^32 ** divide by 2 again since what is going in is half scale
 
 
 
