@@ -48,3 +48,11 @@ err = 0;
     end
  end
 end
+err = 0;
+for i = 3:4:length(h_d)
+    err = err + (h_d(i))^2;
+end
+err = err-max(abs(h_d).^2);
+MER_cur = max(abs(h_d).^2)/(err);
+MER_cur = 10*log10(MER_cur);
+

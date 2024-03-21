@@ -13,7 +13,7 @@ reg count;
 integer i;
 always @ (posedge clk)
 if(reset||clk_en)
-count <= 1'b0;
+count <= 1'b1;
 else
 count <= count + 1'b1;
 

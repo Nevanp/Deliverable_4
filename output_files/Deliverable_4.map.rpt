@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Deliverable_4
-Wed Mar 20 14:01:35 2024
+Thu Mar 21 16:57:54 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Standard Edition
 
 
@@ -27,13 +27,13 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Standard Edition
  19. Parameter Settings for User Entity Instance: mer_test:MER_Q
  20. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
  21. Parameter Settings for Inferred Entity Instance: mapper_power:MAPPOW_I|lpm_mult:Mult0
- 22. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1
- 23. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0
- 24. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult1
- 25. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0
- 26. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0
- 27. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|lpm_mult:Mult0
- 28. Parameter Settings for Inferred Entity Instance: square_error:SQERR_I|lpm_mult:Mult0
+ 22. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0
+ 23. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1
+ 24. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0
+ 25. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult1
+ 26. Parameter Settings for Inferred Entity Instance: square_error:SQERR_I|lpm_mult:Mult0
+ 27. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0
+ 28. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|lpm_mult:Mult0
  29. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|lpm_mult:Mult15
  30. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|lpm_mult:Mult14
  31. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|lpm_mult:Mult13
@@ -97,15 +97,15 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 20 14:01:34 2024              ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 21 16:57:54 2024              ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Standard Edition ;
 ; Revision Name                      ; Deliverable_4                                      ;
 ; Top-level Entity Name              ; Deliverable_4                                      ;
 ; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; 18,137                                             ;
-;     Total combinational functions  ; 8,397                                              ;
-;     Dedicated logic registers      ; 13,483                                             ;
-; Total registers                    ; 13483                                              ;
+; Total logic elements               ; 18,213                                             ;
+;     Total combinational functions  ; 8,471                                              ;
+;     Dedicated logic registers      ; 13,487                                             ;
+; Total registers                    ; 13487                                              ;
 ; Total pins                         ; 32                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 522,240                                            ;
@@ -305,8 +305,8 @@ https://fpgasoftware.intel.com/eula.
 ; lpm_mult.tdf                                                       ; yes             ; Megafunction                                 ; /opt/intelFPGA/22.1.2/quartus/libraries/megafunctions/lpm_mult.tdf                                                              ;             ;
 ; multcore.inc                                                       ; yes             ; Megafunction                                 ; /opt/intelFPGA/22.1.2/quartus/libraries/megafunctions/multcore.inc                                                              ;             ;
 ; db/mult_c6t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_c6t.tdf                                                    ;             ;
-; db/mult_q9t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_q9t.tdf                                                    ;             ;
 ; db/mult_0at.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_0at.tdf                                                    ;             ;
+; db/mult_s9t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_s9t.tdf                                                    ;             ;
 ; db/mult_86t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_86t.tdf                                                    ;             ;
 ; db/mult_46t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_46t.tdf                                                    ;             ;
 ; db/mult_26t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_26t.tdf                                                    ;             ;
@@ -316,6 +316,7 @@ https://fpgasoftware.intel.com/eula.
 ; db/mult_s4t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_s4t.tdf                                                    ;             ;
 ; db/mult_r9t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_r9t.tdf                                                    ;             ;
 ; db/mult_q4t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_q4t.tdf                                                    ;             ;
+; db/mult_q9t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_q9t.tdf                                                    ;             ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
@@ -324,20 +325,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 18,137 ;
+; Estimated Total logic elements              ; 18,213 ;
 ;                                             ;        ;
-; Total combinational functions               ; 8397   ;
+; Total combinational functions               ; 8471   ;
 ; Logic element usage by number of LUT inputs ;        ;
 ;     -- 4 input functions                    ; 3304   ;
-;     -- 3 input functions                    ; 4428   ;
-;     -- <=2 input functions                  ; 665    ;
+;     -- 3 input functions                    ; 4494   ;
+;     -- <=2 input functions                  ; 673    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 4796   ;
-;     -- arithmetic mode                      ; 3601   ;
+;     -- normal mode                          ; 4800   ;
+;     -- arithmetic mode                      ; 3671   ;
 ;                                             ;        ;
-; Total registers                             ; 13483  ;
-;     -- Dedicated logic registers            ; 13483  ;
+; Total registers                             ; 13487  ;
+;     -- Dedicated logic registers            ; 13487  ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; I/O pins                                    ; 32     ;
@@ -346,8 +347,8 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 50     ;
 ;                                             ;        ;
 ; Maximum fan-out node                        ; clk    ;
-; Maximum fan-out                             ; 11662  ;
-; Total fan-out                               ; 77615  ;
+; Maximum fan-out                             ; 11666  ;
+; Total fan-out                               ; 77837  ;
 ; Average fan-out                             ; 3.45   ;
 +---------------------------------------------+--------+
 
@@ -357,31 +358,31 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                       ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |Deliverable_4                                                                                                                          ; 8397 (34)           ; 13483 (28)                ; 522240      ; 50           ; 0       ; 25        ; 32   ; 0            ; |Deliverable_4                                                                                                                                                                                                                                                                                                                                            ; Deliverable_4                     ; work         ;
+; |Deliverable_4                                                                                                                          ; 8471 (34)           ; 13487 (28)                ; 522240      ; 50           ; 0       ; 25        ; 32   ; 0            ; |Deliverable_4                                                                                                                                                                                                                                                                                                                                            ; Deliverable_4                     ; work         ;
 ;    |mapper_power:MAPPOW_I|                                                                                                              ; 91 (91)             ; 106 (106)                 ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mapper_power:MAPPOW_I                                                                                                                                                                                                                                                                                                                      ; mapper_power                      ; work         ;
 ;       |lpm_mult:Mult0|                                                                                                                  ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mapper_power:MAPPOW_I|lpm_mult:Mult0                                                                                                                                                                                                                                                                                                       ; lpm_mult                          ; work         ;
 ;          |mult_c6t:auto_generated|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mapper_power:MAPPOW_I|lpm_mult:Mult0|mult_c6t:auto_generated                                                                                                                                                                                                                                                                               ; mult_c6t                          ; work         ;
-;    |mer_test:MER_I|                                                                                                                     ; 5996 (20)           ; 6678 (20)                 ; 0           ; 46           ; 0       ; 23        ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I                                                                                                                                                                                                                                                                                                                             ; mer_test                          ; work         ;
-;       |comm_SUT:SUT_2|                                                                                                                  ; 5794 (73)           ; 6636 (90)                 ; 0           ; 46           ; 0       ; 23        ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2                                                                                                                                                                                                                                                                                                              ; comm_SUT                          ; work         ;
+;    |mer_test:MER_I|                                                                                                                     ; 6070 (20)           ; 6682 (20)                 ; 0           ; 46           ; 0       ; 23        ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I                                                                                                                                                                                                                                                                                                                             ; mer_test                          ; work         ;
+;       |comm_SUT:SUT_2|                                                                                                                  ; 5868 (73)           ; 6640 (90)                 ; 0           ; 46           ; 0       ; 23        ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2                                                                                                                                                                                                                                                                                                              ; comm_SUT                          ; work         ;
 ;          |down_sampler_2_1:DOWN1|                                                                                                       ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1                                                                                                                                                                                                                                                                                       ; down_sampler_2_1                  ; work         ;
 ;          |down_sampler_2_2:DOWN2|                                                                                                       ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2                                                                                                                                                                                                                                                                                       ; down_sampler_2_2                  ; work         ;
 ;          |down_sampler_4:DOWNER|                                                                                                        ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|down_sampler_4:DOWNER                                                                                                                                                                                                                                                                                        ; down_sampler_4                    ; work         ;
-;          |half_band_filter_1:HALF1|                                                                                                     ; 105 (105)           ; 239 (239)                 ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1                                                                                                                                                                                                                                                                                     ; half_band_filter_1                ; work         ;
+;          |half_band_filter_1:HALF1|                                                                                                     ; 124 (124)           ; 241 (241)                 ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1                                                                                                                                                                                                                                                                                     ; half_band_filter_1                ; work         ;
 ;             |lpm_mult:Mult0|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
 ;                |mult_c6t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0|mult_c6t:auto_generated                                                                                                                                                                                                                                              ; mult_c6t                          ; work         ;
-;          |half_band_filter_1:HALF4|                                                                                                     ; 104 (104)           ; 238 (238)                 ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4                                                                                                                                                                                                                                                                                     ; half_band_filter_1                ; work         ;
+;          |half_band_filter_1:HALF4|                                                                                                     ; 123 (123)           ; 240 (240)                 ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4                                                                                                                                                                                                                                                                                     ; half_band_filter_1                ; work         ;
 ;             |lpm_mult:Mult0|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|lpm_mult:Mult0                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
 ;                |mult_c6t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|lpm_mult:Mult0|mult_c6t:auto_generated                                                                                                                                                                                                                                              ; mult_c6t                          ; work         ;
-;          |half_band_filter_2:HALF2|                                                                                                     ; 72 (72)             ; 154 (154)                 ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2                                                                                                                                                                                                                                                                                     ; half_band_filter_2                ; work         ;
+;          |half_band_filter_2:HALF2|                                                                                                     ; 90 (90)             ; 154 (154)                 ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2                                                                                                                                                                                                                                                                                     ; half_band_filter_2                ; work         ;
 ;             |lpm_mult:Mult0|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
 ;                |mult_0at:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0|mult_0at:auto_generated                                                                                                                                                                                                                                              ; mult_0at                          ; work         ;
 ;             |lpm_mult:Mult1|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
-;                |mult_q9t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1|mult_q9t:auto_generated                                                                                                                                                                                                                                              ; mult_q9t                          ; work         ;
-;          |half_band_filter_2:HALF3|                                                                                                     ; 72 (72)             ; 154 (154)                 ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3                                                                                                                                                                                                                                                                                     ; half_band_filter_2                ; work         ;
+;                |mult_s9t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1|mult_s9t:auto_generated                                                                                                                                                                                                                                              ; mult_s9t                          ; work         ;
+;          |half_band_filter_2:HALF3|                                                                                                     ; 90 (90)             ; 154 (154)                 ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3                                                                                                                                                                                                                                                                                     ; half_band_filter_2                ; work         ;
 ;             |lpm_mult:Mult0|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
 ;                |mult_0at:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0|mult_0at:auto_generated                                                                                                                                                                                                                                              ; mult_0at                          ; work         ;
 ;             |lpm_mult:Mult1|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult1                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
-;                |mult_q9t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult1|mult_q9t:auto_generated                                                                                                                                                                                                                                              ; mult_q9t                          ; work         ;
+;                |mult_s9t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult1|mult_s9t:auto_generated                                                                                                                                                                                                                                              ; mult_s9t                          ; work         ;
 ;          |rx_red2:RECEIVER|                                                                                                             ; 2882 (2882)         ; 5350 (5350)               ; 0           ; 34           ; 0       ; 17        ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER                                                                                                                                                                                                                                                                                             ; rx_red2                           ; work         ;
 ;             |lpm_mult:Mult0|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|lpm_mult:Mult0                                                                                                                                                                                                                                                                              ; lpm_mult                          ; work         ;
 ;                |mult_q4t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|lpm_mult:Mult0|mult_q4t:auto_generated                                                                                                                                                                                                                                                      ; mult_q4t                          ; work         ;
@@ -1471,14 +1472,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_out_delayed[0][0]   ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|mult_out[0]      ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_out[0]      ; Stuck at GND due to stuck port data_in                                             ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|mult_out[1]      ; Stuck at GND due to stuck port data_in                                             ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_out[1]      ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc2[0]             ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc12[0]            ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc2_delayed[0][0]  ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc12_delayed[0][0] ; Stuck at GND due to stuck port data_in                                             ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|mult_acc[0,1]    ; Stuck at GND due to stuck port data_in                                             ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_acc[0,1]    ; Stuck at GND due to stuck port data_in                                             ;
+; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|mult_acc[0]      ; Stuck at GND due to stuck port data_in                                             ;
+; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_acc[0]      ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|b_out0a[1]               ; Merged with mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|b_out0a[0]              ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_out[34,35]          ; Merged with mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_out[33]            ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_16[34,35]           ; Merged with mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_16[33]             ;
@@ -1509,7 +1508,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; mapper_power:MAPPOW_I|sq_power[1]                                       ; Stuck at GND due to stuck port data_in                                             ;
 ; square_error:SQERR_I|sq_err[1]                                          ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|sam_mult_count[0]        ; Merged with clk_phase[0]                                                           ;
-; Total Number of Removed Registers = 717                                 ;                                                                                    ;
+; Total Number of Removed Registers = 713                                 ;                                                                                    ;
 +-------------------------------------------------------------------------+------------------------------------------------------------------------------------+
 
 
@@ -1530,10 +1529,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;                                                                    ; due to stuck port data_in ;                                                                         ;
 ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_out[0] ; Stuck at GND              ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_acc[0]      ;
 ;                                                                    ; due to stuck port data_in ;                                                                         ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|mult_out[1] ; Stuck at GND              ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|mult_acc[1]      ;
-;                                                                    ; due to stuck port data_in ;                                                                         ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_out[1] ; Stuck at GND              ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_acc[1]      ;
-;                                                                    ; due to stuck port data_in ;                                                                         ;
 +--------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
 
 
@@ -1542,9 +1537,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 13483 ;
+; Total registers                              ; 13487 ;
 ; Number of registers using Synchronous Clear  ; 75    ;
-; Number of registers using Synchronous Load   ; 751   ;
+; Number of registers using Synchronous Load   ; 753   ;
 ; Number of registers using Asynchronous Clear ; 2195  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 5740  ;
@@ -1579,8 +1574,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |Deliverable_4|mer_test:MER_I|lfsr:SUT|lfsr[14]                            ;
-; 3:1                ; 71 bits   ; 142 LEs       ; 71 LEs               ; 71 LEs                 ; Yes        ; |Deliverable_4|mapper_power:MAPPOW_I|power_acc[20]                         ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |Deliverable_4|mer_test:MER_I|lfsr:SUT|lfsr[13]                            ;
+; 3:1                ; 71 bits   ; 142 LEs       ; 71 LEs               ; 71 LEs                 ; Yes        ; |Deliverable_4|mapper_power:MAPPOW_I|power_acc[30]                         ;
 ; 4:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |Deliverable_4|counter[12]~reg0                                            ;
 ; 4:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Deliverable_4|square_error:SQERR_I|err_acc[47]                            ;
 ; 4:1                ; 288 bits  ; 576 LEs       ; 576 LEs              ; 0 LEs                  ; Yes        ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|sam_out9a[0] ;
@@ -1721,7 +1716,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1 ;
+; Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0 ;
 +------------------------------------------------+--------------+--------------------------------------------------------+
 ; Parameter Name                                 ; Value        ; Type                                                   ;
 +------------------------------------------------+--------------+--------------------------------------------------------+
@@ -1730,9 +1725,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                           ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                         ;
 ; LPM_WIDTHA                                     ; 18           ; Untyped                                                ;
-; LPM_WIDTHB                                     ; 15           ; Untyped                                                ;
-; LPM_WIDTHP                                     ; 33           ; Untyped                                                ;
-; LPM_WIDTHR                                     ; 33           ; Untyped                                                ;
+; LPM_WIDTHB                                     ; 18           ; Untyped                                                ;
+; LPM_WIDTHP                                     ; 36           ; Untyped                                                ;
+; LPM_WIDTHR                                     ; 36           ; Untyped                                                ;
 ; LPM_WIDTHS                                     ; 1            ; Untyped                                                ;
 ; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                                ;
 ; LPM_PIPELINE                                   ; 0            ; Untyped                                                ;
@@ -1747,7 +1742,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                ;
-; CBXI_PARAMETER                                 ; mult_q9t     ; Untyped                                                ;
+; CBXI_PARAMETER                                 ; mult_0at     ; Untyped                                                ;
 ; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                ;
@@ -1756,7 +1751,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0 ;
+; Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1 ;
++------------------------------------------------+--------------+--------------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                                   ;
++------------------------------------------------+--------------+--------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                         ;
+; LPM_WIDTHA                                     ; 18           ; Untyped                                                ;
+; LPM_WIDTHB                                     ; 16           ; Untyped                                                ;
+; LPM_WIDTHP                                     ; 34           ; Untyped                                                ;
+; LPM_WIDTHR                                     ; 34           ; Untyped                                                ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                                ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                                ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                                ;
+; LATENCY                                        ; 0            ; Untyped                                                ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                                ;
+; USE_EAB                                        ; OFF          ; Untyped                                                ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped                                                ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                    ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                ;
+; CBXI_PARAMETER                                 ; mult_s9t     ; Untyped                                                ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                ;
++------------------------------------------------+--------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0 ;
 +------------------------------------------------+--------------+--------------------------------------------------------+
 ; Parameter Name                                 ; Value        ; Type                                                   ;
 +------------------------------------------------+--------------+--------------------------------------------------------+
@@ -1800,9 +1830,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                           ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                         ;
 ; LPM_WIDTHA                                     ; 18           ; Untyped                                                ;
-; LPM_WIDTHB                                     ; 15           ; Untyped                                                ;
-; LPM_WIDTHP                                     ; 33           ; Untyped                                                ;
-; LPM_WIDTHR                                     ; 33           ; Untyped                                                ;
+; LPM_WIDTHB                                     ; 16           ; Untyped                                                ;
+; LPM_WIDTHP                                     ; 34           ; Untyped                                                ;
+; LPM_WIDTHR                                     ; 34           ; Untyped                                                ;
 ; LPM_WIDTHS                                     ; 1            ; Untyped                                                ;
 ; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                                ;
 ; LPM_PIPELINE                                   ; 0            ; Untyped                                                ;
@@ -1817,7 +1847,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                ;
-; CBXI_PARAMETER                                 ; mult_q9t     ; Untyped                                                ;
+; CBXI_PARAMETER                                 ; mult_s9t     ; Untyped                                                ;
 ; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                ;
@@ -1825,38 +1855,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0 ;
-+------------------------------------------------+--------------+--------------------------------------------------------+
-; Parameter Name                                 ; Value        ; Type                                                   ;
-+------------------------------------------------+--------------+--------------------------------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                             ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                           ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                           ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                         ;
-; LPM_WIDTHA                                     ; 18           ; Untyped                                                ;
-; LPM_WIDTHB                                     ; 18           ; Untyped                                                ;
-; LPM_WIDTHP                                     ; 36           ; Untyped                                                ;
-; LPM_WIDTHR                                     ; 36           ; Untyped                                                ;
-; LPM_WIDTHS                                     ; 1            ; Untyped                                                ;
-; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                                ;
-; LPM_PIPELINE                                   ; 0            ; Untyped                                                ;
-; LATENCY                                        ; 0            ; Untyped                                                ;
-; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                ;
-; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                                ;
-; USE_EAB                                        ; OFF          ; Untyped                                                ;
-; MAXIMIZE_SPEED                                 ; 6            ; Untyped                                                ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                    ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                ;
-; CBXI_PARAMETER                                 ; mult_0at     ; Untyped                                                ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                ;
-+------------------------------------------------+--------------+--------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: square_error:SQERR_I|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+----------------------+
+; Parameter Name                                 ; Value        ; Type                 ;
++------------------------------------------------+--------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 18           ; Untyped              ;
+; LPM_WIDTHB                                     ; 18           ; Untyped              ;
+; LPM_WIDTHP                                     ; 36           ; Untyped              ;
+; LPM_WIDTHR                                     ; 36           ; Untyped              ;
+; LPM_WIDTHS                                     ; 1            ; Untyped              ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped              ;
+; LPM_PIPELINE                                   ; 0            ; Untyped              ;
+; LATENCY                                        ; 0            ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped              ;
+; USE_EAB                                        ; OFF          ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped              ;
+; CBXI_PARAMETER                                 ; mult_c6t     ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped              ;
++------------------------------------------------+--------------+----------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1927,41 +1957,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                ;
 +------------------------------------------------+--------------+--------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: square_error:SQERR_I|lpm_mult:Mult0 ;
-+------------------------------------------------+--------------+----------------------+
-; Parameter Name                                 ; Value        ; Type                 ;
-+------------------------------------------------+--------------+----------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY           ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY         ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE         ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE       ;
-; LPM_WIDTHA                                     ; 18           ; Untyped              ;
-; LPM_WIDTHB                                     ; 18           ; Untyped              ;
-; LPM_WIDTHP                                     ; 36           ; Untyped              ;
-; LPM_WIDTHR                                     ; 36           ; Untyped              ;
-; LPM_WIDTHS                                     ; 1            ; Untyped              ;
-; LPM_REPRESENTATION                             ; SIGNED       ; Untyped              ;
-; LPM_PIPELINE                                   ; 0            ; Untyped              ;
-; LATENCY                                        ; 0            ; Untyped              ;
-; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped              ;
-; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped              ;
-; USE_EAB                                        ; OFF          ; Untyped              ;
-; MAXIMIZE_SPEED                                 ; 6            ; Untyped              ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped              ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped              ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K  ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped              ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped              ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped              ;
-; CBXI_PARAMETER                                 ; mult_c6t     ; Untyped              ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped              ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped              ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped              ;
-+------------------------------------------------+--------------+----------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2577,17 +2572,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                  ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
-; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1 ;
-;     -- LPM_WIDTHA                     ; 18                                                                    ;
-;     -- LPM_WIDTHB                     ; 15                                                                    ;
-;     -- LPM_WIDTHP                     ; 33                                                                    ;
-;     -- LPM_REPRESENTATION             ; SIGNED                                                                ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                                    ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                                                   ;
-;     -- USE_EAB                        ; OFF                                                                   ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                  ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
 ; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 18                                                                    ;
 ;     -- LPM_WIDTHB                     ; 18                                                                    ;
@@ -2599,10 +2583,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                  ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
-; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult1 ;
+; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1 ;
 ;     -- LPM_WIDTHA                     ; 18                                                                    ;
-;     -- LPM_WIDTHB                     ; 15                                                                    ;
-;     -- LPM_WIDTHP                     ; 33                                                                    ;
+;     -- LPM_WIDTHB                     ; 16                                                                    ;
+;     -- LPM_WIDTHP                     ; 34                                                                    ;
 ;     -- LPM_REPRESENTATION             ; SIGNED                                                                ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO                                                                    ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES                                                                   ;
@@ -2621,6 +2605,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                  ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
+; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult1 ;
+;     -- LPM_WIDTHA                     ; 18                                                                    ;
+;     -- LPM_WIDTHB                     ; 16                                                                    ;
+;     -- LPM_WIDTHP                     ; 34                                                                    ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                                ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                                   ;
+;     -- USE_EAB                        ; OFF                                                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
+; Entity Instance                       ; square_error:SQERR_I|lpm_mult:Mult0                                   ;
+;     -- LPM_WIDTHA                     ; 18                                                                    ;
+;     -- LPM_WIDTHB                     ; 18                                                                    ;
+;     -- LPM_WIDTHP                     ; 36                                                                    ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                                ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                                    ;
+;     -- USE_EAB                        ; OFF                                                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
 ; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 18                                                                    ;
 ;     -- LPM_WIDTHB                     ; 18                                                                    ;
@@ -2633,17 +2639,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
 ; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 18                                                                    ;
-;     -- LPM_WIDTHB                     ; 18                                                                    ;
-;     -- LPM_WIDTHP                     ; 36                                                                    ;
-;     -- LPM_REPRESENTATION             ; SIGNED                                                                ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                                    ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                                                    ;
-;     -- USE_EAB                        ; OFF                                                                   ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                  ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
-; Entity Instance                       ; square_error:SQERR_I|lpm_mult:Mult0                                   ;
 ;     -- LPM_WIDTHA                     ; 18                                                                    ;
 ;     -- LPM_WIDTHB                     ; 18                                                                    ;
 ;     -- LPM_WIDTHP                     ; 36                                                                    ;
@@ -2988,22 +2983,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 507                         ;
-; cycloneiii_ff         ; 6939                        ;
+; cycloneiii_ff         ; 6943                        ;
 ;     ENA               ; 3844                        ;
 ;     ENA SCLR          ; 23                          ;
 ;     ENA SLD           ; 38                          ;
 ;     SCLR              ; 4                           ;
-;     SLD               ; 642                         ;
-;     plain             ; 2388                        ;
-; cycloneiii_lcell_comb ; 6228                        ;
-;     arith             ; 3510                        ;
+;     SLD               ; 644                         ;
+;     plain             ; 2390                        ;
+; cycloneiii_lcell_comb ; 6302                        ;
+;     arith             ; 3580                        ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 108                         ;
-;         3 data inputs ; 3401                        ;
-;     normal            ; 2718                        ;
-;         0 data inputs ; 4                           ;
+;         2 data inputs ; 112                         ;
+;         3 data inputs ; 3467                        ;
+;     normal            ; 2722                        ;
+;         0 data inputs ; 6                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 377                         ;
+;         2 data inputs ; 379                         ;
 ;         3 data inputs ; 381                         ;
 ;         4 data inputs ; 1948                        ;
 ; cycloneiii_mac_mult   ; 25                          ;
@@ -3019,7 +3014,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -4090,7 +4085,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Standard Edition
-    Info: Processing started: Wed Mar 20 14:01:04 2024
+    Info: Processing started: Thu Mar 21 16:57:26 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Deliverable_4 -c Deliverable_4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -4284,7 +4279,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/cmpr_ngc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.03.20.14:01:18 Progress: Loading sld4f823103/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.03.21.16:57:39 Progress: Loading sld4f823103/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -4309,13 +4304,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/ip/sld4f823103/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (278001): Inferred 25 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mapper_power:MAPPOW_I|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/mapper_power.v Line: 26
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|Mult1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|Mult1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|Mult1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|Mult1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "square_error:SQERR_I|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/square_error.v Line: 17
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_1.v Line: 51
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_1.v Line: 51
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "square_error:SQERR_I|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/square_error.v Line: 17
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|Mult15" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/rx_red2.v Line: 547
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|Mult14" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/rx_red2.v Line: 543
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|Mult13" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/rx_red2.v Line: 539
@@ -4346,19 +4341,6 @@ Info (12133): Instantiated megafunction "mapper_power:MAPPOW_I|lpm_mult:Mult0" w
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_c6t.tdf
     Info (12023): Found entity 1: mult_c6t File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_c6t.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
-Info (12133): Instantiated megafunction "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1" with the following parameter: File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
-    Info (12134): Parameter "LPM_WIDTHA" = "18"
-    Info (12134): Parameter "LPM_WIDTHB" = "15"
-    Info (12134): Parameter "LPM_WIDTHP" = "33"
-    Info (12134): Parameter "LPM_WIDTHR" = "33"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_q9t.tdf
-    Info (12023): Found entity 1: mult_q9t File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_q9t.tdf Line: 29
 Info (12130): Elaborated megafunction instantiation "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
 Info (12133): Instantiated megafunction "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0" with the following parameter: File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
     Info (12134): Parameter "LPM_WIDTHA" = "18"
@@ -4372,8 +4354,21 @@ Info (12133): Instantiated megafunction "mer_test:MER_I|comm_SUT:SUT_2|half_band
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_0at.tdf
     Info (12023): Found entity 1: mult_0at File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_0at.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_1.v Line: 51
-Info (12133): Instantiated megafunction "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0" with the following parameter: File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_1.v Line: 51
+Info (12130): Elaborated megafunction instantiation "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
+Info (12133): Instantiated megafunction "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1" with the following parameter: File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
+    Info (12134): Parameter "LPM_WIDTHA" = "18"
+    Info (12134): Parameter "LPM_WIDTHB" = "16"
+    Info (12134): Parameter "LPM_WIDTHP" = "34"
+    Info (12134): Parameter "LPM_WIDTHR" = "34"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_s9t.tdf
+    Info (12023): Found entity 1: mult_s9t File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_s9t.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "square_error:SQERR_I|lpm_mult:Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/square_error.v Line: 17
+Info (12133): Instantiated megafunction "square_error:SQERR_I|lpm_mult:Mult0" with the following parameter: File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/square_error.v Line: 17
     Info (12134): Parameter "LPM_WIDTHA" = "18"
     Info (12134): Parameter "LPM_WIDTHB" = "18"
     Info (12134): Parameter "LPM_WIDTHP" = "36"
@@ -4383,8 +4378,8 @@ Info (12133): Instantiated megafunction "mer_test:MER_I|comm_SUT:SUT_2|half_band
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12130): Elaborated megafunction instantiation "square_error:SQERR_I|lpm_mult:Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/square_error.v Line: 17
-Info (12133): Instantiated megafunction "square_error:SQERR_I|lpm_mult:Mult0" with the following parameter: File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/square_error.v Line: 17
+Info (12130): Elaborated megafunction instantiation "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_1.v Line: 51
+Info (12133): Instantiated megafunction "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0" with the following parameter: File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_1.v Line: 51
     Info (12134): Parameter "LPM_WIDTHA" = "18"
     Info (12134): Parameter "LPM_WIDTHB" = "18"
     Info (12134): Parameter "LPM_WIDTHP" = "36"
@@ -4636,17 +4631,17 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "PHYS_KEY[2]" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/Deliverable_4.v Line: 3
     Warning (15610): No output dependent on input pin "PHYS_KEY[3]" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/Deliverable_4.v Line: 3
     Warning (15610): No output dependent on input pin "PHYS_SW[3]" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/Deliverable_4.v Line: 4
-Info (21057): Implemented 18829 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 18905 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 18232 logic cells
+    Info (21061): Implemented 18308 logic cells
     Info (21064): Implemented 510 RAM segments
     Info (21062): Implemented 50 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 132 warnings
-    Info: Peak virtual memory: 981 megabytes
-    Info: Processing ended: Wed Mar 20 14:01:35 2024
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:49
+    Info: Peak virtual memory: 953 megabytes
+    Info: Processing ended: Thu Mar 21 16:57:54 2024
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:44
 
 
 +------------------------------------------+

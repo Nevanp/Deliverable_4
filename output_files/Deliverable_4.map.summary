@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Wed Mar 20 14:01:34 2024
+Analysis & Synthesis Status : Successful - Thu Mar 21 16:57:54 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Standard Edition
 Revision Name : Deliverable_4
 Top-level Entity Name : Deliverable_4
 Family : Cyclone IV E
-Total logic elements : 18,137
-    Total combinational functions : 8,397
-    Dedicated logic registers : 13,483
-Total registers : 13483
+Total logic elements : 18,213
+    Total combinational functions : 8,471
+    Dedicated logic registers : 13,487
+Total registers : 13487
 Total pins : 32
 Total virtual pins : 0
 Total memory bits : 522,240

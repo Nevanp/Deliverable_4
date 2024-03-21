@@ -47,6 +47,8 @@ create_clock -name {clk_50} -period 20.000 -waveform { 0.000 10.000 } [get_ports
 #**************************************************************
 
 create_generated_clock -name {clk} -source [get_ports {CLOCK_50}] -divide_by 2 -master_clock {clk_50} [get_registers {clk}] 
+create_generated_clock -name {clk_spm} -source [get_ports {CLOCK_50}] -divide_by 8 -master_clock {CLOCK_50} [get_registers {clk_smp}] 
+create_generated_clock -name {clk_sym} -source [get_ports {CLOCK_50}] -divide_by 32 -master_clock {CLOCK_50} [get_registers {clk_sym}] 
 
 
 #**************************************************************

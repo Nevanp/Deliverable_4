@@ -7,7 +7,7 @@ module half_band_filter_2(
 reg signed [17:0] b,b1;
 reg signed [17:0] x[8:0];
 reg signed [35:0] mult_out[1:0];
-reg signed [17:0] sum_1, sum_2;
+reg signed [18:0] sum_1, sum_2;
 integer i;
 
 
