@@ -7,7 +7,7 @@ module half_band_filter_2(
 reg signed [17:0] b,b1;
 reg signed [17:0] x[8:0];
 reg signed [35:0] mult_out[1:0];
-reg signed [18:0] sum_1, sum_2;
+reg signed [17:0] sum_1, sum_2;
 integer i;
 
 
@@ -35,16 +35,16 @@ mult_out[1] <= sum_1*b;
 
 
 always @ *
-b <= -18'sd12940;
+b <= -18'sd16941;
 
 always @ *
-b1 <= 18'sd77324;
+b1 <= 18'sd105834;
 
 
 
 
 always @ (posedge clk)
-y <= mult_out[1][35:18] + mult_out[0][35:18] + {x[4][17],x[4][17:1]};
+y <= mult_out[1][35:18] + mult_out[0][35:18] + $signed({x[4][17],x[4][17:1]})+$signed({{3{x[4][17]}},x[4][17:3]})+$signed({{4{x[4][17]}},x[4][17:4]});
 
 
 

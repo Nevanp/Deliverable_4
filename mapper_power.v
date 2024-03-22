@@ -3,8 +3,8 @@ module mapper_power(input clk,
 	input clk_en,
     input clear_accum,
 	input signed [17:0] decision_var,
-    output reg signed [17:0] mapper_power,
-	output reg signed [35:0] ref_level
+    output reg signed [35:0] mapper_power,
+	output reg signed [17:0] ref_level
 );
 
 // setup inter signals

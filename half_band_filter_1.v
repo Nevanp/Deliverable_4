@@ -58,10 +58,10 @@ mult_acc <= mult_acc + mult_out;
 
 
 always @ *
-b <= -18'sd12940;
+b <= -18'sd16941;
 
 always @ *
-b1 <= 18'sd77324;
+b1 <= 18'sd105834;
 
 reg signed [17:0] peak_delay;
 always @ (posedge clk)
@@ -69,7 +69,7 @@ peak_delay <= x[5];
 
 always @ (posedge clk)
 if(clk_en)
-y <= mult_acc[35:18] + {peak_delay[17],peak_delay[17:1]};
+y <= mult_acc[35:18] + $signed({peak_delay[17],peak_delay[17:1]})+$signed({{3{peak_delay[17]}},peak_delay[17:3]})+$signed({{4{peak_delay[17]}},peak_delay[17:4]})+$signed({{5{peak_delay[17]}},peak_delay[17:5]});
 
 
 

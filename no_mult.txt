@@ -1,0 +1,978 @@
+always @ (*)
+begin
+casez(sum_level_1[0])
+5'b10000: multout[0] <= 18'sd198;
+5'b10101: multout[0] <= 18'sd131;
+5'b01000: multout[0] <= 18'sd99;
+5'bz1010: multout[0] <= 18'sd66;
+5'b01101: multout[0] <= 18'sd32;
+5'b00000: multout[0] <= 18'sd0;
+5'b00010: multout[0] <= 18'sd-33;
+5'bz0100: multout[0] <= 18'sd-67;
+5'b00111: multout[0] <= 18'sd-99;
+5'b01001: multout[0] <= 18'sd-132;
+5'b01110: multout[0] <= 18'sd-198;
+default: multout[0] <= 18'sd0;
+endcase
+
+casez(sum_level_1[1])
+5'b10000: multout[1] <= 18'sd76;
+5'b10101: multout[1] <= 18'sd50;
+5'b01000: multout[1] <= 18'sd38;
+5'bz1010: multout[1] <= 18'sd25;
+5'b01101: multout[1] <= 18'sd12;
+5'b00000: multout[1] <= 18'sd0;
+5'b00010: multout[1] <= 18'sd-13;
+5'bz0100: multout[1] <= 18'sd-26;
+5'b00111: multout[1] <= 18'sd-38;
+5'b01001: multout[1] <= 18'sd-51;
+5'b01110: multout[1] <= 18'sd-76;
+default: multout[1] <= 18'sd0;
+endcase
+
+casez(sum_level_1[2])
+5'b10000: multout[2] <= 18'sd-116;
+5'b10101: multout[2] <= 18'sd-78;
+5'b01000: multout[2] <= 18'sd-58;
+5'bz1010: multout[2] <= 18'sd-39;
+5'b01101: multout[2] <= 18'sd-20;
+5'b00000: multout[2] <= 18'sd0;
+5'b00010: multout[2] <= 18'sd19;
+5'bz0100: multout[2] <= 18'sd38;
+5'b00111: multout[2] <= 18'sd58;
+5'b01001: multout[2] <= 18'sd77;
+5'b01110: multout[2] <= 18'sd116;
+default: multout[2] <= 18'sd0;
+endcase
+
+casez(sum_level_1[3])
+5'b10000: multout[3] <= 18'sd-240;
+5'b10101: multout[3] <= 18'sd-160;
+5'b01000: multout[3] <= 18'sd-120;
+5'bz1010: multout[3] <= 18'sd-81;
+5'b01101: multout[3] <= 18'sd-40;
+5'b00000: multout[3] <= 18'sd0;
+5'b00010: multout[3] <= 18'sd39;
+5'bz0100: multout[3] <= 18'sd80;
+5'b00111: multout[3] <= 18'sd120;
+5'b01001: multout[3] <= 18'sd159;
+5'b01110: multout[3] <= 18'sd240;
+default: multout[3] <= 18'sd0;
+endcase
+
+casez(sum_level_1[4])
+5'b10000: multout[4] <= 18'sd-200;
+5'b10101: multout[4] <= 18'sd-134;
+5'b01000: multout[4] <= 18'sd-100;
+5'bz1010: multout[4] <= 18'sd-67;
+5'b01101: multout[4] <= 18'sd-34;
+5'b00000: multout[4] <= 18'sd0;
+5'b00010: multout[4] <= 18'sd33;
+5'bz0100: multout[4] <= 18'sd66;
+5'b00111: multout[4] <= 18'sd100;
+5'b01001: multout[4] <= 18'sd133;
+5'b01110: multout[4] <= 18'sd200;
+default: multout[4] <= 18'sd0;
+endcase
+
+casez(sum_level_1[5])
+5'b10000: multout[5] <= 18'sd-12;
+5'b10101: multout[5] <= 18'sd-8;
+5'b01000: multout[5] <= 18'sd-6;
+5'bz1010: multout[5] <= 18'sd-5;
+5'b01101: multout[5] <= 18'sd-2;
+5'b00000: multout[5] <= 18'sd0;
+5'b00010: multout[5] <= 18'sd1;
+5'bz0100: multout[5] <= 18'sd4;
+5'b00111: multout[5] <= 18'sd6;
+5'b01001: multout[5] <= 18'sd7;
+5'b01110: multout[5] <= 18'sd12;
+default: multout[5] <= 18'sd0;
+endcase
+
+casez(sum_level_1[6])
+5'b10000: multout[6] <= 18'sd200;
+5'b10101: multout[6] <= 18'sd133;
+5'b01000: multout[6] <= 18'sd100;
+5'bz1010: multout[6] <= 18'sd66;
+5'b01101: multout[6] <= 18'sd33;
+5'b00000: multout[6] <= 18'sd0;
+5'b00010: multout[6] <= 18'sd-34;
+5'bz0100: multout[6] <= 18'sd-67;
+5'b00111: multout[6] <= 18'sd-100;
+5'b01001: multout[6] <= 18'sd-134;
+5'b01110: multout[6] <= 18'sd-200;
+default: multout[6] <= 18'sd0;
+endcase
+
+casez(sum_level_1[7])
+5'b10000: multout[7] <= 18'sd284;
+5'b10101: multout[7] <= 18'sd189;
+5'b01000: multout[7] <= 18'sd142;
+5'bz1010: multout[7] <= 18'sd94;
+5'b01101: multout[7] <= 18'sd47;
+5'b00000: multout[7] <= 18'sd0;
+5'b00010: multout[7] <= 18'sd-48;
+5'bz0100: multout[7] <= 18'sd-95;
+5'b00111: multout[7] <= 18'sd-142;
+5'b01001: multout[7] <= 18'sd-190;
+5'b01110: multout[7] <= 18'sd-284;
+default: multout[7] <= 18'sd0;
+endcase
+
+casez(sum_level_1[8])
+5'b10000: multout[8] <= 18'sd172;
+5'b10101: multout[8] <= 18'sd114;
+5'b01000: multout[8] <= 18'sd86;
+5'bz1010: multout[8] <= 18'sd57;
+5'b01101: multout[8] <= 18'sd28;
+5'b00000: multout[8] <= 18'sd0;
+5'b00010: multout[8] <= 18'sd-29;
+5'bz0100: multout[8] <= 18'sd-58;
+5'b00111: multout[8] <= 18'sd-86;
+5'b01001: multout[8] <= 18'sd-115;
+5'b01110: multout[8] <= 18'sd-172;
+default: multout[8] <= 18'sd0;
+endcase
+
+casez(sum_level_1[9])
+5'b10000: multout[9] <= 18'sd-70;
+5'b10101: multout[9] <= 18'sd-47;
+5'b01000: multout[9] <= 18'sd-35;
+5'bz1010: multout[9] <= 18'sd-24;
+5'b01101: multout[9] <= 18'sd-12;
+5'b00000: multout[9] <= 18'sd0;
+5'b00010: multout[9] <= 18'sd11;
+5'bz0100: multout[9] <= 18'sd23;
+5'b00111: multout[9] <= 18'sd35;
+5'b01001: multout[9] <= 18'sd46;
+5'b01110: multout[9] <= 18'sd70;
+default: multout[9] <= 18'sd0;
+endcase
+
+casez(sum_level_1[10])
+5'b10000: multout[10] <= 18'sd-276;
+5'b10101: multout[10] <= 18'sd-184;
+5'b01000: multout[10] <= 18'sd-138;
+5'bz1010: multout[10] <= 18'sd-93;
+5'b01101: multout[10] <= 18'sd-46;
+5'b00000: multout[10] <= 18'sd0;
+5'b00010: multout[10] <= 18'sd45;
+5'bz0100: multout[10] <= 18'sd92;
+5'b00111: multout[10] <= 18'sd138;
+5'b01001: multout[10] <= 18'sd183;
+5'b01110: multout[10] <= 18'sd276;
+default: multout[10] <= 18'sd0;
+endcase
+
+casez(sum_level_1[11])
+5'b10000: multout[11] <= 18'sd-294;
+5'b10101: multout[11] <= 18'sd-196;
+5'b01000: multout[11] <= 18'sd-147;
+5'bz1010: multout[11] <= 18'sd-99;
+5'b01101: multout[11] <= 18'sd-49;
+5'b00000: multout[11] <= 18'sd0;
+5'b00010: multout[11] <= 18'sd48;
+5'bz0100: multout[11] <= 18'sd98;
+5'b00111: multout[11] <= 18'sd147;
+5'b01001: multout[11] <= 18'sd195;
+5'b01110: multout[11] <= 18'sd294;
+default: multout[11] <= 18'sd0;
+endcase
+
+casez(sum_level_1[12])
+5'b10000: multout[12] <= 18'sd-104;
+5'b10101: multout[12] <= 18'sd-70;
+5'b01000: multout[12] <= 18'sd-52;
+5'bz1010: multout[12] <= 18'sd-35;
+5'b01101: multout[12] <= 18'sd-18;
+5'b00000: multout[12] <= 18'sd0;
+5'b00010: multout[12] <= 18'sd17;
+5'bz0100: multout[12] <= 18'sd34;
+5'b00111: multout[12] <= 18'sd52;
+5'b01001: multout[12] <= 18'sd69;
+5'b01110: multout[12] <= 18'sd104;
+default: multout[12] <= 18'sd0;
+endcase
+
+casez(sum_level_1[13])
+5'b10000: multout[13] <= 18'sd168;
+5'b10101: multout[13] <= 18'sd111;
+5'b01000: multout[13] <= 18'sd84;
+5'bz1010: multout[13] <= 18'sd56;
+5'b01101: multout[13] <= 18'sd27;
+5'b00000: multout[13] <= 18'sd0;
+5'b00010: multout[13] <= 18'sd-28;
+5'bz0100: multout[13] <= 18'sd-57;
+5'b00111: multout[13] <= 18'sd-84;
+5'b01001: multout[13] <= 18'sd-112;
+5'b01110: multout[13] <= 18'sd-168;
+default: multout[13] <= 18'sd0;
+endcase
+
+casez(sum_level_1[14])
+5'b10000: multout[14] <= 18'sd326;
+5'b10101: multout[14] <= 18'sd217;
+5'b01000: multout[14] <= 18'sd163;
+5'bz1010: multout[14] <= 18'sd108;
+5'b01101: multout[14] <= 18'sd54;
+5'b00000: multout[14] <= 18'sd0;
+5'b00010: multout[14] <= 18'sd-55;
+5'bz0100: multout[14] <= 18'sd-109;
+5'b00111: multout[14] <= 18'sd-163;
+5'b01001: multout[14] <= 18'sd-218;
+5'b01110: multout[14] <= 18'sd-326;
+default: multout[14] <= 18'sd0;
+endcase
+
+casez(sum_level_1[15])
+5'b10000: multout[15] <= 18'sd254;
+5'b10101: multout[15] <= 18'sd169;
+5'b01000: multout[15] <= 18'sd127;
+5'bz1010: multout[15] <= 18'sd84;
+5'b01101: multout[15] <= 18'sd42;
+5'b00000: multout[15] <= 18'sd0;
+5'b00010: multout[15] <= 18'sd-43;
+5'bz0100: multout[15] <= 18'sd-85;
+5'b00111: multout[15] <= 18'sd-127;
+5'b01001: multout[15] <= 18'sd-170;
+5'b01110: multout[15] <= 18'sd-254;
+default: multout[15] <= 18'sd0;
+endcase
+
+casez(sum_level_1[16])
+5'b10000: multout[16] <= 18'sd-6;
+5'b10101: multout[16] <= 18'sd-4;
+5'b01000: multout[16] <= 18'sd-3;
+5'bz1010: multout[16] <= 18'sd-3;
+5'b01101: multout[16] <= 18'sd-1;
+5'b00000: multout[16] <= 18'sd0;
+5'b00010: multout[16] <= 18'sd0;
+5'bz0100: multout[16] <= 18'sd2;
+5'b00111: multout[16] <= 18'sd3;
+5'b01001: multout[16] <= 18'sd3;
+5'b01110: multout[16] <= 18'sd6;
+default: multout[16] <= 18'sd0;
+endcase
+
+casez(sum_level_1[17])
+5'b10000: multout[17] <= 18'sd-268;
+5'b10101: multout[17] <= 18'sd-179;
+5'b01000: multout[17] <= 18'sd-134;
+5'bz1010: multout[17] <= 18'sd-90;
+5'b01101: multout[17] <= 18'sd-45;
+5'b00000: multout[17] <= 18'sd0;
+5'b00010: multout[17] <= 18'sd44;
+5'bz0100: multout[17] <= 18'sd89;
+5'b00111: multout[17] <= 18'sd134;
+5'b01001: multout[17] <= 18'sd178;
+5'b01110: multout[17] <= 18'sd268;
+default: multout[17] <= 18'sd0;
+endcase
+
+casez(sum_level_1[18])
+5'b10000: multout[18] <= 18'sd-336;
+5'b10101: multout[18] <= 18'sd-224;
+5'b01000: multout[18] <= 18'sd-168;
+5'bz1010: multout[18] <= 18'sd-113;
+5'b01101: multout[18] <= 18'sd-56;
+5'b00000: multout[18] <= 18'sd0;
+5'b00010: multout[18] <= 18'sd55;
+5'bz0100: multout[18] <= 18'sd112;
+5'b00111: multout[18] <= 18'sd168;
+5'b01001: multout[18] <= 18'sd223;
+5'b01110: multout[18] <= 18'sd336;
+default: multout[18] <= 18'sd0;
+endcase
+
+casez(sum_level_1[19])
+5'b10000: multout[19] <= 18'sd-148;
+5'b10101: multout[19] <= 18'sd-99;
+5'b01000: multout[19] <= 18'sd-74;
+5'bz1010: multout[19] <= 18'sd-50;
+5'b01101: multout[19] <= 18'sd-25;
+5'b00000: multout[19] <= 18'sd0;
+5'b00010: multout[19] <= 18'sd24;
+5'bz0100: multout[19] <= 18'sd49;
+5'b00111: multout[19] <= 18'sd74;
+5'b01001: multout[19] <= 18'sd98;
+5'b01110: multout[19] <= 18'sd148;
+default: multout[19] <= 18'sd0;
+endcase
+
+casez(sum_level_1[20])
+5'b10000: multout[20] <= 18'sd160;
+5'b10101: multout[20] <= 18'sd106;
+5'b01000: multout[20] <= 18'sd80;
+5'bz1010: multout[20] <= 18'sd53;
+5'b01101: multout[20] <= 18'sd26;
+5'b00000: multout[20] <= 18'sd0;
+5'b00010: multout[20] <= 18'sd-27;
+5'bz0100: multout[20] <= 18'sd-54;
+5'b00111: multout[20] <= 18'sd-80;
+5'b01001: multout[20] <= 18'sd-107;
+5'b01110: multout[20] <= 18'sd-160;
+default: multout[20] <= 18'sd0;
+endcase
+
+casez(sum_level_1[21])
+5'b10000: multout[21] <= 18'sd358;
+5'b10101: multout[21] <= 18'sd238;
+5'b01000: multout[21] <= 18'sd179;
+5'bz1010: multout[21] <= 18'sd119;
+5'b01101: multout[21] <= 18'sd59;
+5'b00000: multout[21] <= 18'sd0;
+5'b00010: multout[21] <= 18'sd-60;
+5'bz0100: multout[21] <= 18'sd-120;
+5'b00111: multout[21] <= 18'sd-179;
+5'b01001: multout[21] <= 18'sd-239;
+5'b01110: multout[21] <= 18'sd-358;
+default: multout[21] <= 18'sd0;
+endcase
+
+casez(sum_level_1[22])
+5'b10000: multout[22] <= 18'sd278;
+5'b10101: multout[22] <= 18'sd185;
+5'b01000: multout[22] <= 18'sd139;
+5'bz1010: multout[22] <= 18'sd92;
+5'b01101: multout[22] <= 18'sd46;
+5'b00000: multout[22] <= 18'sd0;
+5'b00010: multout[22] <= 18'sd-47;
+5'bz0100: multout[22] <= 18'sd-93;
+5'b00111: multout[22] <= 18'sd-139;
+5'b01001: multout[22] <= 18'sd-186;
+5'b01110: multout[22] <= 18'sd-278;
+default: multout[22] <= 18'sd0;
+endcase
+
+casez(sum_level_1[23])
+5'b10000: multout[23] <= 18'sd-38;
+5'b10101: multout[23] <= 18'sd-26;
+5'b01000: multout[23] <= 18'sd-19;
+5'bz1010: multout[23] <= 18'sd-13;
+5'b01101: multout[23] <= 18'sd-7;
+5'b00000: multout[23] <= 18'sd0;
+5'b00010: multout[23] <= 18'sd6;
+5'bz0100: multout[23] <= 18'sd12;
+5'b00111: multout[23] <= 18'sd19;
+5'b01001: multout[23] <= 18'sd25;
+5'b01110: multout[23] <= 18'sd38;
+default: multout[23] <= 18'sd0;
+endcase
+
+casez(sum_level_1[24])
+5'b10000: multout[24] <= 18'sd-356;
+5'b10101: multout[24] <= 18'sd-238;
+5'b01000: multout[24] <= 18'sd-178;
+5'bz1010: multout[24] <= 18'sd-119;
+5'b01101: multout[24] <= 18'sd-60;
+5'b00000: multout[24] <= 18'sd0;
+5'b00010: multout[24] <= 18'sd59;
+5'bz0100: multout[24] <= 18'sd118;
+5'b00111: multout[24] <= 18'sd178;
+5'b01001: multout[24] <= 18'sd237;
+5'b01110: multout[24] <= 18'sd356;
+default: multout[24] <= 18'sd0;
+endcase
+
+casez(sum_level_1[25])
+5'b10000: multout[25] <= 18'sd-416;
+5'b10101: multout[25] <= 18'sd-278;
+5'b01000: multout[25] <= 18'sd-208;
+5'bz1010: multout[25] <= 18'sd-139;
+5'b01101: multout[25] <= 18'sd-70;
+5'b00000: multout[25] <= 18'sd0;
+5'b00010: multout[25] <= 18'sd69;
+5'bz0100: multout[25] <= 18'sd138;
+5'b00111: multout[25] <= 18'sd208;
+5'b01001: multout[25] <= 18'sd277;
+5'b01110: multout[25] <= 18'sd416;
+default: multout[25] <= 18'sd0;
+endcase
+
+casez(sum_level_1[26])
+5'b10000: multout[26] <= 18'sd-132;
+5'b10101: multout[26] <= 18'sd-88;
+5'b01000: multout[26] <= 18'sd-66;
+5'bz1010: multout[26] <= 18'sd-45;
+5'b01101: multout[26] <= 18'sd-22;
+5'b00000: multout[26] <= 18'sd0;
+5'b00010: multout[26] <= 18'sd21;
+5'bz0100: multout[26] <= 18'sd44;
+5'b00111: multout[26] <= 18'sd66;
+5'b01001: multout[26] <= 18'sd87;
+5'b01110: multout[26] <= 18'sd132;
+default: multout[26] <= 18'sd0;
+endcase
+
+casez(sum_level_1[27])
+5'b10000: multout[27] <= 18'sd320;
+5'b10101: multout[27] <= 18'sd213;
+5'b01000: multout[27] <= 18'sd160;
+5'bz1010: multout[27] <= 18'sd106;
+5'b01101: multout[27] <= 18'sd53;
+5'b00000: multout[27] <= 18'sd0;
+5'b00010: multout[27] <= 18'sd-54;
+5'bz0100: multout[27] <= 18'sd-107;
+5'b00111: multout[27] <= 18'sd-160;
+5'b01001: multout[27] <= 18'sd-214;
+5'b01110: multout[27] <= 18'sd-320;
+default: multout[27] <= 18'sd0;
+endcase
+
+casez(sum_level_1[28])
+5'b10000: multout[28] <= 18'sd590;
+5'b10101: multout[28] <= 18'sd393;
+5'b01000: multout[28] <= 18'sd295;
+5'bz1010: multout[28] <= 18'sd196;
+5'b01101: multout[28] <= 18'sd98;
+5'b00000: multout[28] <= 18'sd0;
+5'b00010: multout[28] <= 18'sd-99;
+5'bz0100: multout[28] <= 18'sd-197;
+5'b00111: multout[28] <= 18'sd-295;
+5'b01001: multout[28] <= 18'sd-394;
+5'b01110: multout[28] <= 18'sd-590;
+default: multout[28] <= 18'sd0;
+endcase
+
+casez(sum_level_1[29])
+5'b10000: multout[29] <= 18'sd424;
+5'b10101: multout[29] <= 18'sd282;
+5'b01000: multout[29] <= 18'sd212;
+5'bz1010: multout[29] <= 18'sd141;
+5'b01101: multout[29] <= 18'sd70;
+5'b00000: multout[29] <= 18'sd0;
+5'b00010: multout[29] <= 18'sd-71;
+5'bz0100: multout[29] <= 18'sd-142;
+5'b00111: multout[29] <= 18'sd-212;
+5'b01001: multout[29] <= 18'sd-283;
+5'b01110: multout[29] <= 18'sd-424;
+default: multout[29] <= 18'sd0;
+endcase
+
+casez(sum_level_1[30])
+5'b10000: multout[30] <= 18'sd-132;
+5'b10101: multout[30] <= 18'sd-88;
+5'b01000: multout[30] <= 18'sd-66;
+5'bz1010: multout[30] <= 18'sd-45;
+5'b01101: multout[30] <= 18'sd-22;
+5'b00000: multout[30] <= 18'sd0;
+5'b00010: multout[30] <= 18'sd21;
+5'bz0100: multout[30] <= 18'sd44;
+5'b00111: multout[30] <= 18'sd66;
+5'b01001: multout[30] <= 18'sd87;
+5'b01110: multout[30] <= 18'sd132;
+default: multout[30] <= 18'sd0;
+endcase
+
+casez(sum_level_1[31])
+5'b10000: multout[31] <= 18'sd-712;
+5'b10101: multout[31] <= 18'sd-475;
+5'b01000: multout[31] <= 18'sd-356;
+5'bz1010: multout[31] <= 18'sd-238;
+5'b01101: multout[31] <= 18'sd-119;
+5'b00000: multout[31] <= 18'sd0;
+5'b00010: multout[31] <= 18'sd118;
+5'bz0100: multout[31] <= 18'sd237;
+5'b00111: multout[31] <= 18'sd356;
+5'b01001: multout[31] <= 18'sd474;
+5'b01110: multout[31] <= 18'sd712;
+default: multout[31] <= 18'sd0;
+endcase
+
+casez(sum_level_1[32])
+5'b10000: multout[32] <= 18'sd-854;
+5'b10101: multout[32] <= 18'sd-570;
+5'b01000: multout[32] <= 18'sd-427;
+5'bz1010: multout[32] <= 18'sd-285;
+5'b01101: multout[32] <= 18'sd-143;
+5'b00000: multout[32] <= 18'sd0;
+5'b00010: multout[32] <= 18'sd142;
+5'bz0100: multout[32] <= 18'sd284;
+5'b00111: multout[32] <= 18'sd427;
+5'b01001: multout[32] <= 18'sd569;
+5'b01110: multout[32] <= 18'sd854;
+default: multout[32] <= 18'sd0;
+endcase
+
+casez(sum_level_1[33])
+5'b10000: multout[33] <= 18'sd-350;
+5'b10101: multout[33] <= 18'sd-234;
+5'b01000: multout[33] <= 18'sd-175;
+5'bz1010: multout[33] <= 18'sd-117;
+5'b01101: multout[33] <= 18'sd-59;
+5'b00000: multout[33] <= 18'sd0;
+5'b00010: multout[33] <= 18'sd58;
+5'bz0100: multout[33] <= 18'sd116;
+5'b00111: multout[33] <= 18'sd175;
+5'b01001: multout[33] <= 18'sd233;
+5'b01110: multout[33] <= 18'sd350;
+default: multout[33] <= 18'sd0;
+endcase
+
+casez(sum_level_1[34])
+5'b10000: multout[34] <= 18'sd548;
+5'b10101: multout[34] <= 18'sd365;
+5'b01000: multout[34] <= 18'sd274;
+5'bz1010: multout[34] <= 18'sd182;
+5'b01101: multout[34] <= 18'sd91;
+5'b00000: multout[34] <= 18'sd0;
+5'b00010: multout[34] <= 18'sd-92;
+5'bz0100: multout[34] <= 18'sd-183;
+5'b00111: multout[34] <= 18'sd-274;
+5'b01001: multout[34] <= 18'sd-366;
+5'b01110: multout[34] <= 18'sd-548;
+default: multout[34] <= 18'sd0;
+endcase
+
+casez(sum_level_1[35])
+5'b10000: multout[35] <= 18'sd1232;
+5'b10101: multout[35] <= 18'sd821;
+5'b01000: multout[35] <= 18'sd616;
+5'bz1010: multout[35] <= 18'sd410;
+5'b01101: multout[35] <= 18'sd205;
+5'b00000: multout[35] <= 18'sd0;
+5'b00010: multout[35] <= 18'sd-206;
+5'bz0100: multout[35] <= 18'sd-411;
+5'b00111: multout[35] <= 18'sd-616;
+5'b01001: multout[35] <= 18'sd-822;
+5'b01110: multout[35] <= 18'sd-1232;
+default: multout[35] <= 18'sd0;
+endcase
+
+casez(sum_level_1[36])
+5'b10000: multout[36] <= 18'sd1134;
+5'b10101: multout[36] <= 18'sd755;
+5'b01000: multout[36] <= 18'sd567;
+5'bz1010: multout[36] <= 18'sd378;
+5'b01101: multout[36] <= 18'sd188;
+5'b00000: multout[36] <= 18'sd0;
+5'b00010: multout[36] <= 18'sd-189;
+5'bz0100: multout[36] <= 18'sd-379;
+5'b00111: multout[36] <= 18'sd-567;
+5'b01001: multout[36] <= 18'sd-756;
+5'b01110: multout[36] <= 18'sd-1134;
+default: multout[36] <= 18'sd0;
+endcase
+
+casez(sum_level_1[37])
+5'b10000: multout[37] <= 18'sd156;
+5'b10101: multout[37] <= 18'sd103;
+5'b01000: multout[37] <= 18'sd78;
+5'bz1010: multout[37] <= 18'sd52;
+5'b01101: multout[37] <= 18'sd25;
+5'b00000: multout[37] <= 18'sd0;
+5'b00010: multout[37] <= 18'sd-26;
+5'bz0100: multout[37] <= 18'sd-53;
+5'b00111: multout[37] <= 18'sd-78;
+5'b01001: multout[37] <= 18'sd-104;
+5'b01110: multout[37] <= 18'sd-156;
+default: multout[37] <= 18'sd0;
+endcase
+
+casez(sum_level_1[38])
+5'b10000: multout[38] <= 18'sd-1158;
+5'b10101: multout[38] <= 18'sd-772;
+5'b01000: multout[38] <= 18'sd-579;
+5'bz1010: multout[38] <= 18'sd-387;
+5'b01101: multout[38] <= 18'sd-193;
+5'b00000: multout[38] <= 18'sd0;
+5'b00010: multout[38] <= 18'sd192;
+5'bz0100: multout[38] <= 18'sd386;
+5'b00111: multout[38] <= 18'sd579;
+5'b01001: multout[38] <= 18'sd771;
+5'b01110: multout[38] <= 18'sd1158;
+default: multout[38] <= 18'sd0;
+endcase
+
+casez(sum_level_1[39])
+5'b10000: multout[39] <= 18'sd-1908;
+5'b10101: multout[39] <= 18'sd-1272;
+5'b01000: multout[39] <= 18'sd-954;
+5'bz1010: multout[39] <= 18'sd-637;
+5'b01101: multout[39] <= 18'sd-318;
+5'b00000: multout[39] <= 18'sd0;
+5'b00010: multout[39] <= 18'sd317;
+5'bz0100: multout[39] <= 18'sd636;
+5'b00111: multout[39] <= 18'sd954;
+5'b01001: multout[39] <= 18'sd1271;
+5'b01110: multout[39] <= 18'sd1908;
+default: multout[39] <= 18'sd0;
+endcase
+
+casez(sum_level_1[40])
+5'b10000: multout[40] <= 18'sd-1420;
+5'b10101: multout[40] <= 18'sd-947;
+5'b01000: multout[40] <= 18'sd-710;
+5'bz1010: multout[40] <= 18'sd-474;
+5'b01101: multout[40] <= 18'sd-237;
+5'b00000: multout[40] <= 18'sd0;
+5'b00010: multout[40] <= 18'sd236;
+5'bz0100: multout[40] <= 18'sd473;
+5'b00111: multout[40] <= 18'sd710;
+5'b01001: multout[40] <= 18'sd946;
+5'b01110: multout[40] <= 18'sd1420;
+default: multout[40] <= 18'sd0;
+endcase
+
+casez(sum_level_1[41])
+5'b10000: multout[41] <= 18'sd206;
+5'b10101: multout[41] <= 18'sd137;
+5'b01000: multout[41] <= 18'sd103;
+5'bz1010: multout[41] <= 18'sd68;
+5'b01101: multout[41] <= 18'sd34;
+5'b00000: multout[41] <= 18'sd0;
+5'b00010: multout[41] <= 18'sd-35;
+5'bz0100: multout[41] <= 18'sd-69;
+5'b00111: multout[41] <= 18'sd-103;
+5'b01001: multout[41] <= 18'sd-138;
+5'b01110: multout[41] <= 18'sd-206;
+default: multout[41] <= 18'sd0;
+endcase
+
+casez(sum_level_1[42])
+5'b10000: multout[42] <= 18'sd2030;
+5'b10101: multout[42] <= 18'sd1353;
+5'b01000: multout[42] <= 18'sd1015;
+5'bz1010: multout[42] <= 18'sd676;
+5'b01101: multout[42] <= 18'sd338;
+5'b00000: multout[42] <= 18'sd0;
+5'b00010: multout[42] <= 18'sd-339;
+5'bz0100: multout[42] <= 18'sd-677;
+5'b00111: multout[42] <= 18'sd-1015;
+5'b01001: multout[42] <= 18'sd-1354;
+5'b01110: multout[42] <= 18'sd-2030;
+default: multout[42] <= 18'sd0;
+endcase
+
+casez(sum_level_1[43])
+5'b10000: multout[43] <= 18'sd2778;
+5'b10101: multout[43] <= 18'sd1851;
+5'b01000: multout[43] <= 18'sd1389;
+5'bz1010: multout[43] <= 18'sd926;
+5'b01101: multout[43] <= 18'sd462;
+5'b00000: multout[43] <= 18'sd0;
+5'b00010: multout[43] <= 18'sd-463;
+5'bz0100: multout[43] <= 18'sd-927;
+5'b00111: multout[43] <= 18'sd-1389;
+5'b01001: multout[43] <= 18'sd-1852;
+5'b01110: multout[43] <= 18'sd-2778;
+default: multout[43] <= 18'sd0;
+endcase
+
+casez(sum_level_1[44])
+5'b10000: multout[44] <= 18'sd1696;
+5'b10101: multout[44] <= 18'sd1130;
+5'b01000: multout[44] <= 18'sd848;
+5'bz1010: multout[44] <= 18'sd565;
+5'b01101: multout[44] <= 18'sd282;
+5'b00000: multout[44] <= 18'sd0;
+5'b00010: multout[44] <= 18'sd-283;
+5'bz0100: multout[44] <= 18'sd-566;
+5'b00111: multout[44] <= 18'sd-848;
+5'b01001: multout[44] <= 18'sd-1131;
+5'b01110: multout[44] <= 18'sd-1696;
+default: multout[44] <= 18'sd0;
+endcase
+
+casez(sum_level_1[45])
+5'b10000: multout[45] <= 18'sd-820;
+5'b10101: multout[45] <= 18'sd-547;
+5'b01000: multout[45] <= 18'sd-410;
+5'bz1010: multout[45] <= 18'sd-274;
+5'b01101: multout[45] <= 18'sd-137;
+5'b00000: multout[45] <= 18'sd0;
+5'b00010: multout[45] <= 18'sd136;
+5'bz0100: multout[45] <= 18'sd273;
+5'b00111: multout[45] <= 18'sd410;
+5'b01001: multout[45] <= 18'sd546;
+5'b01110: multout[45] <= 18'sd820;
+default: multout[45] <= 18'sd0;
+endcase
+
+casez(sum_level_1[46])
+5'b10000: multout[46] <= 18'sd-3278;
+5'b10101: multout[46] <= 18'sd-2186;
+5'b01000: multout[46] <= 18'sd-1639;
+5'bz1010: multout[46] <= 18'sd-1093;
+5'b01101: multout[46] <= 18'sd-547;
+5'b00000: multout[46] <= 18'sd0;
+5'b00010: multout[46] <= 18'sd546;
+5'bz0100: multout[46] <= 18'sd1092;
+5'b00111: multout[46] <= 18'sd1639;
+5'b01001: multout[46] <= 18'sd2185;
+5'b01110: multout[46] <= 18'sd3278;
+default: multout[46] <= 18'sd0;
+endcase
+
+casez(sum_level_1[47])
+5'b10000: multout[47] <= 18'sd-3932;
+5'b10101: multout[47] <= 18'sd-2622;
+5'b01000: multout[47] <= 18'sd-1966;
+5'bz1010: multout[47] <= 18'sd-1311;
+5'b01101: multout[47] <= 18'sd-656;
+5'b00000: multout[47] <= 18'sd0;
+5'b00010: multout[47] <= 18'sd655;
+5'bz0100: multout[47] <= 18'sd1310;
+5'b00111: multout[47] <= 18'sd1966;
+5'b01001: multout[47] <= 18'sd2621;
+5'b01110: multout[47] <= 18'sd3932;
+default: multout[47] <= 18'sd0;
+endcase
+
+casez(sum_level_1[48])
+5'b10000: multout[48] <= 18'sd-1946;
+5'b10101: multout[48] <= 18'sd-1298;
+5'b01000: multout[48] <= 18'sd-973;
+5'bz1010: multout[48] <= 18'sd-649;
+5'b01101: multout[48] <= 18'sd-325;
+5'b00000: multout[48] <= 18'sd0;
+5'b00010: multout[48] <= 18'sd324;
+5'bz0100: multout[48] <= 18'sd648;
+5'b00111: multout[48] <= 18'sd973;
+5'b01001: multout[48] <= 18'sd1297;
+5'b01110: multout[48] <= 18'sd1946;
+default: multout[48] <= 18'sd0;
+endcase
+
+casez(sum_level_1[49])
+5'b10000: multout[49] <= 18'sd1836;
+5'b10101: multout[49] <= 18'sd1223;
+5'b01000: multout[49] <= 18'sd918;
+5'bz1010: multout[49] <= 18'sd612;
+5'b01101: multout[49] <= 18'sd305;
+5'b00000: multout[49] <= 18'sd0;
+5'b00010: multout[49] <= 18'sd-306;
+5'bz0100: multout[49] <= 18'sd-613;
+5'b00111: multout[49] <= 18'sd-918;
+5'b01001: multout[49] <= 18'sd-1224;
+5'b01110: multout[49] <= 18'sd-1836;
+default: multout[49] <= 18'sd0;
+endcase
+
+casez(sum_level_1[50])
+5'b10000: multout[50] <= 18'sd5152;
+5'b10101: multout[50] <= 18'sd3434;
+5'b01000: multout[50] <= 18'sd2576;
+5'bz1010: multout[50] <= 18'sd1717;
+5'b01101: multout[50] <= 18'sd858;
+5'b00000: multout[50] <= 18'sd0;
+5'b00010: multout[50] <= 18'sd-859;
+5'bz0100: multout[50] <= 18'sd-1718;
+5'b00111: multout[50] <= 18'sd-2576;
+5'b01001: multout[50] <= 18'sd-3435;
+5'b01110: multout[50] <= 18'sd-5152;
+default: multout[50] <= 18'sd0;
+endcase
+
+casez(sum_level_1[51])
+5'b10000: multout[51] <= 18'sd5578;
+5'b10101: multout[51] <= 18'sd3718;
+5'b01000: multout[51] <= 18'sd2789;
+5'bz1010: multout[51] <= 18'sd1859;
+5'b01101: multout[51] <= 18'sd929;
+5'b00000: multout[51] <= 18'sd0;
+5'b00010: multout[51] <= 18'sd-930;
+5'bz0100: multout[51] <= 18'sd-1860;
+5'b00111: multout[51] <= 18'sd-2789;
+5'b01001: multout[51] <= 18'sd-3719;
+5'b01110: multout[51] <= 18'sd-5578;
+default: multout[51] <= 18'sd0;
+endcase
+
+casez(sum_level_1[52])
+5'b10000: multout[52] <= 18'sd2160;
+5'b10101: multout[52] <= 18'sd1439;
+5'b01000: multout[52] <= 18'sd1080;
+5'bz1010: multout[52] <= 18'sd720;
+5'b01101: multout[52] <= 18'sd359;
+5'b00000: multout[52] <= 18'sd0;
+5'b00010: multout[52] <= 18'sd-360;
+5'bz0100: multout[52] <= 18'sd-721;
+5'b00111: multout[52] <= 18'sd-1080;
+5'b01001: multout[52] <= 18'sd-1440;
+5'b01110: multout[52] <= 18'sd-2160;
+default: multout[52] <= 18'sd0;
+endcase
+
+casez(sum_level_1[53])
+5'b10000: multout[53] <= 18'sd-3620;
+5'b10101: multout[53] <= 18'sd-2414;
+5'b01000: multout[53] <= 18'sd-1810;
+5'bz1010: multout[53] <= 18'sd-1207;
+5'b01101: multout[53] <= 18'sd-604;
+5'b00000: multout[53] <= 18'sd0;
+5'b00010: multout[53] <= 18'sd603;
+5'bz0100: multout[53] <= 18'sd1206;
+5'b00111: multout[53] <= 18'sd1810;
+5'b01001: multout[53] <= 18'sd2413;
+5'b01110: multout[53] <= 18'sd3620;
+default: multout[53] <= 18'sd0;
+endcase
+
+casez(sum_level_1[54])
+5'b10000: multout[54] <= 18'sd-8302;
+5'b10101: multout[54] <= 18'sd-5535;
+5'b01000: multout[54] <= 18'sd-4151;
+5'bz1010: multout[54] <= 18'sd-2768;
+5'b01101: multout[54] <= 18'sd-1384;
+5'b00000: multout[54] <= 18'sd0;
+5'b00010: multout[54] <= 18'sd1383;
+5'bz0100: multout[54] <= 18'sd2767;
+5'b00111: multout[54] <= 18'sd4151;
+5'b01001: multout[54] <= 18'sd5534;
+5'b01110: multout[54] <= 18'sd8302;
+default: multout[54] <= 18'sd0;
+endcase
+
+casez(sum_level_1[55])
+5'b10000: multout[55] <= 18'sd-8316;
+5'b10101: multout[55] <= 18'sd-5544;
+5'b01000: multout[55] <= 18'sd-4158;
+5'bz1010: multout[55] <= 18'sd-2773;
+5'b01101: multout[55] <= 18'sd-1386;
+5'b00000: multout[55] <= 18'sd0;
+5'b00010: multout[55] <= 18'sd1385;
+5'bz0100: multout[55] <= 18'sd2772;
+5'b00111: multout[55] <= 18'sd4158;
+5'b01001: multout[55] <= 18'sd5543;
+5'b01110: multout[55] <= 18'sd8316;
+default: multout[55] <= 18'sd0;
+endcase
+
+casez(sum_level_1[56])
+5'b10000: multout[56] <= 18'sd-2320;
+5'b10101: multout[56] <= 18'sd-1547;
+5'b01000: multout[56] <= 18'sd-1160;
+5'bz1010: multout[56] <= 18'sd-774;
+5'b01101: multout[56] <= 18'sd-387;
+5'b00000: multout[56] <= 18'sd0;
+5'b00010: multout[56] <= 18'sd386;
+5'bz0100: multout[56] <= 18'sd773;
+5'b00111: multout[56] <= 18'sd1160;
+5'b01001: multout[56] <= 18'sd1546;
+5'b01110: multout[56] <= 18'sd2320;
+default: multout[56] <= 18'sd0;
+endcase
+
+casez(sum_level_1[57])
+5'b10000: multout[57] <= 18'sd7346;
+5'b10101: multout[57] <= 18'sd4897;
+5'b01000: multout[57] <= 18'sd3673;
+5'bz1010: multout[57] <= 18'sd2448;
+5'b01101: multout[57] <= 18'sd1224;
+5'b00000: multout[57] <= 18'sd0;
+5'b00010: multout[57] <= 18'sd-1225;
+5'bz0100: multout[57] <= 18'sd-2449;
+5'b00111: multout[57] <= 18'sd-3673;
+5'b01001: multout[57] <= 18'sd-4898;
+5'b01110: multout[57] <= 18'sd-7346;
+default: multout[57] <= 18'sd0;
+endcase
+
+casez(sum_level_1[58])
+5'b10000: multout[58] <= 18'sd15132;
+5'b10101: multout[58] <= 18'sd10087;
+5'b01000: multout[58] <= 18'sd7566;
+5'bz1010: multout[58] <= 18'sd5044;
+5'b01101: multout[58] <= 18'sd2521;
+5'b00000: multout[58] <= 18'sd0;
+5'b00010: multout[58] <= 18'sd-2522;
+5'bz0100: multout[58] <= 18'sd-5045;
+5'b00111: multout[58] <= 18'sd-7566;
+5'b01001: multout[58] <= 18'sd-10088;
+5'b01110: multout[58] <= 18'sd-15132;
+default: multout[58] <= 18'sd0;
+endcase
+
+casez(sum_level_1[59])
+5'b10000: multout[59] <= 18'sd14734;
+5'b10101: multout[59] <= 18'sd9822;
+5'b01000: multout[59] <= 18'sd7367;
+5'bz1010: multout[59] <= 18'sd4911;
+5'b01101: multout[59] <= 18'sd2455;
+5'b00000: multout[59] <= 18'sd0;
+5'b00010: multout[59] <= 18'sd-2456;
+5'bz0100: multout[59] <= 18'sd-4912;
+5'b00111: multout[59] <= 18'sd-7367;
+5'b01001: multout[59] <= 18'sd-9823;
+5'b01110: multout[59] <= 18'sd-14734;
+default: multout[59] <= 18'sd0;
+endcase
+
+casez(sum_level_1[60])
+5'b10000: multout[60] <= 18'sd2422;
+5'b10101: multout[60] <= 18'sd1614;
+5'b01000: multout[60] <= 18'sd1211;
+5'bz1010: multout[60] <= 18'sd807;
+5'b01101: multout[60] <= 18'sd403;
+5'b00000: multout[60] <= 18'sd0;
+5'b00010: multout[60] <= 18'sd-404;
+5'bz0100: multout[60] <= 18'sd-808;
+5'b00111: multout[60] <= 18'sd-1211;
+5'b01001: multout[60] <= 18'sd-1615;
+5'b01110: multout[60] <= 18'sd-2422;
+default: multout[60] <= 18'sd0;
+endcase
+
+casez(sum_level_1[61])
+5'b10000: multout[61] <= 18'sd-20482;
+5'b10101: multout[61] <= 18'sd-13655;
+5'b01000: multout[61] <= 18'sd-10241;
+5'bz1010: multout[61] <= 18'sd-6828;
+5'b01101: multout[61] <= 18'sd-3414;
+5'b00000: multout[61] <= 18'sd0;
+5'b00010: multout[61] <= 18'sd3413;
+5'bz0100: multout[61] <= 18'sd6827;
+5'b00111: multout[61] <= 18'sd10241;
+5'b01001: multout[61] <= 18'sd13654;
+5'b01110: multout[61] <= 18'sd20482;
+default: multout[61] <= 18'sd0;
+endcase
+
+casez(sum_level_1[62])
+5'b10000: multout[62] <= 18'sd-47426;
+5'b10101: multout[62] <= 18'sd-31618;
+5'b01000: multout[62] <= 18'sd-23713;
+5'bz1010: multout[62] <= 18'sd-15809;
+5'b01101: multout[62] <= 18'sd-7905;
+5'b00000: multout[62] <= 18'sd0;
+5'b00010: multout[62] <= 18'sd7904;
+5'bz0100: multout[62] <= 18'sd15808;
+5'b00111: multout[62] <= 18'sd23713;
+5'b01001: multout[62] <= 18'sd31617;
+5'b01110: multout[62] <= 18'sd47426;
+default: multout[62] <= 18'sd0;
+endcase
+
+casez(sum_level_1[63])
+5'b10000: multout[63] <= 18'sd-69078;
+5'b10101: multout[63] <= 18'sd-46052;
+5'b01000: multout[63] <= 18'sd-34539;
+5'bz1010: multout[63] <= 18'sd-23027;
+5'b01101: multout[63] <= 18'sd-11513;
+5'b00000: multout[63] <= 18'sd0;
+5'b00010: multout[63] <= 18'sd11512;
+5'bz0100: multout[63] <= 18'sd23026;
+5'b00111: multout[63] <= 18'sd34539;
+5'b01001: multout[63] <= 18'sd46051;
+5'b01110: multout[63] <= 18'sd69078;
+default: multout[63] <= 18'sd0;
+endcase
+
+casez(sum_level_1[64])
+5'b10000: multout[64] <= 18'sd-77356;
+5'b10101: multout[64] <= 18'sd-51571;
+5'b01000: multout[64] <= 18'sd-38678;
+5'bz1010: multout[64] <= 18'sd-25786;
+5'b01101: multout[64] <= 18'sd-12893;
+5'b00000: multout[64] <= 18'sd0;
+5'b00010: multout[64] <= 18'sd12892;
+5'bz0100: multout[64] <= 18'sd25785;
+5'b00111: multout[64] <= 18'sd38678;
+5'b01001: multout[64] <= 18'sd51570;
+5'b01110: multout[64] <= 18'sd77356;
+default: multout[64] <= 18'sd0;
+endcase
+
+end

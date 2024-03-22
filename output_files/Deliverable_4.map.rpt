@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Deliverable_4
-Thu Mar 21 16:57:54 2024
+Fri Mar 22 12:40:14 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Standard Edition
 
 
@@ -27,10 +27,10 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Standard Edition
  19. Parameter Settings for User Entity Instance: mer_test:MER_Q
  20. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
  21. Parameter Settings for Inferred Entity Instance: mapper_power:MAPPOW_I|lpm_mult:Mult0
- 22. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0
- 23. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1
- 24. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0
- 25. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult1
+ 22. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1
+ 23. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0
+ 24. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult1
+ 25. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0
  26. Parameter Settings for Inferred Entity Instance: square_error:SQERR_I|lpm_mult:Mult0
  27. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0
  28. Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|lpm_mult:Mult0
@@ -97,15 +97,15 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 21 16:57:54 2024              ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 22 12:40:13 2024              ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Standard Edition ;
 ; Revision Name                      ; Deliverable_4                                      ;
 ; Top-level Entity Name              ; Deliverable_4                                      ;
 ; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; 18,213                                             ;
-;     Total combinational functions  ; 8,471                                              ;
-;     Dedicated logic registers      ; 13,487                                             ;
-; Total registers                    ; 13487                                              ;
+; Total logic elements               ; 18,339                                             ;
+;     Total combinational functions  ; 8,595                                              ;
+;     Dedicated logic registers      ; 13,507                                             ;
+; Total registers                    ; 13507                                              ;
 ; Total pins                         ; 32                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 522,240                                            ;
@@ -305,8 +305,8 @@ https://fpgasoftware.intel.com/eula.
 ; lpm_mult.tdf                                                       ; yes             ; Megafunction                                 ; /opt/intelFPGA/22.1.2/quartus/libraries/megafunctions/lpm_mult.tdf                                                              ;             ;
 ; multcore.inc                                                       ; yes             ; Megafunction                                 ; /opt/intelFPGA/22.1.2/quartus/libraries/megafunctions/multcore.inc                                                              ;             ;
 ; db/mult_c6t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_c6t.tdf                                                    ;             ;
-; db/mult_0at.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_0at.tdf                                                    ;             ;
 ; db/mult_s9t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_s9t.tdf                                                    ;             ;
+; db/mult_0at.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_0at.tdf                                                    ;             ;
 ; db/mult_86t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_86t.tdf                                                    ;             ;
 ; db/mult_46t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_46t.tdf                                                    ;             ;
 ; db/mult_26t.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_26t.tdf                                                    ;             ;
@@ -325,20 +325,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 18,213 ;
+; Estimated Total logic elements              ; 18,339 ;
 ;                                             ;        ;
-; Total combinational functions               ; 8471   ;
+; Total combinational functions               ; 8595   ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 3304   ;
-;     -- 3 input functions                    ; 4494   ;
-;     -- <=2 input functions                  ; 673    ;
+;     -- 4 input functions                    ; 3300   ;
+;     -- 3 input functions                    ; 4606   ;
+;     -- <=2 input functions                  ; 689    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 4800   ;
-;     -- arithmetic mode                      ; 3671   ;
+;     -- normal mode                          ; 4810   ;
+;     -- arithmetic mode                      ; 3785   ;
 ;                                             ;        ;
-; Total registers                             ; 13487  ;
-;     -- Dedicated logic registers            ; 13487  ;
+; Total registers                             ; 13507  ;
+;     -- Dedicated logic registers            ; 13507  ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; I/O pins                                    ; 32     ;
@@ -347,9 +347,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 50     ;
 ;                                             ;        ;
 ; Maximum fan-out node                        ; clk    ;
-; Maximum fan-out                             ; 11666  ;
-; Total fan-out                               ; 77837  ;
-; Average fan-out                             ; 3.45   ;
+; Maximum fan-out                             ; 11686  ;
+; Total fan-out                               ; 78243  ;
+; Average fan-out                             ; 3.44   ;
 +---------------------------------------------+--------+
 
 
@@ -358,27 +358,27 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                       ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |Deliverable_4                                                                                                                          ; 8471 (34)           ; 13487 (28)                ; 522240      ; 50           ; 0       ; 25        ; 32   ; 0            ; |Deliverable_4                                                                                                                                                                                                                                                                                                                                            ; Deliverable_4                     ; work         ;
-;    |mapper_power:MAPPOW_I|                                                                                                              ; 91 (91)             ; 106 (106)                 ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mapper_power:MAPPOW_I                                                                                                                                                                                                                                                                                                                      ; mapper_power                      ; work         ;
+; |Deliverable_4                                                                                                                          ; 8595 (34)           ; 13507 (28)                ; 522240      ; 50           ; 0       ; 25        ; 32   ; 0            ; |Deliverable_4                                                                                                                                                                                                                                                                                                                                            ; Deliverable_4                     ; work         ;
+;    |mapper_power:MAPPOW_I|                                                                                                              ; 109 (109)           ; 122 (122)                 ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mapper_power:MAPPOW_I                                                                                                                                                                                                                                                                                                                      ; mapper_power                      ; work         ;
 ;       |lpm_mult:Mult0|                                                                                                                  ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mapper_power:MAPPOW_I|lpm_mult:Mult0                                                                                                                                                                                                                                                                                                       ; lpm_mult                          ; work         ;
 ;          |mult_c6t:auto_generated|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mapper_power:MAPPOW_I|lpm_mult:Mult0|mult_c6t:auto_generated                                                                                                                                                                                                                                                                               ; mult_c6t                          ; work         ;
-;    |mer_test:MER_I|                                                                                                                     ; 6070 (20)           ; 6682 (20)                 ; 0           ; 46           ; 0       ; 23        ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I                                                                                                                                                                                                                                                                                                                             ; mer_test                          ; work         ;
-;       |comm_SUT:SUT_2|                                                                                                                  ; 5868 (73)           ; 6640 (90)                 ; 0           ; 46           ; 0       ; 23        ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2                                                                                                                                                                                                                                                                                                              ; comm_SUT                          ; work         ;
+;    |mer_test:MER_I|                                                                                                                     ; 6176 (20)           ; 6686 (20)                 ; 0           ; 46           ; 0       ; 23        ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I                                                                                                                                                                                                                                                                                                                             ; mer_test                          ; work         ;
+;       |comm_SUT:SUT_2|                                                                                                                  ; 5974 (73)           ; 6644 (90)                 ; 0           ; 46           ; 0       ; 23        ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2                                                                                                                                                                                                                                                                                                              ; comm_SUT                          ; work         ;
 ;          |down_sampler_2_1:DOWN1|                                                                                                       ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1                                                                                                                                                                                                                                                                                       ; down_sampler_2_1                  ; work         ;
 ;          |down_sampler_2_2:DOWN2|                                                                                                       ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2                                                                                                                                                                                                                                                                                       ; down_sampler_2_2                  ; work         ;
 ;          |down_sampler_4:DOWNER|                                                                                                        ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|down_sampler_4:DOWNER                                                                                                                                                                                                                                                                                        ; down_sampler_4                    ; work         ;
-;          |half_band_filter_1:HALF1|                                                                                                     ; 124 (124)           ; 241 (241)                 ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1                                                                                                                                                                                                                                                                                     ; half_band_filter_1                ; work         ;
+;          |half_band_filter_1:HALF1|                                                                                                     ; 157 (157)           ; 243 (243)                 ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1                                                                                                                                                                                                                                                                                     ; half_band_filter_1                ; work         ;
 ;             |lpm_mult:Mult0|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
 ;                |mult_c6t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|lpm_mult:Mult0|mult_c6t:auto_generated                                                                                                                                                                                                                                              ; mult_c6t                          ; work         ;
-;          |half_band_filter_1:HALF4|                                                                                                     ; 123 (123)           ; 240 (240)                 ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4                                                                                                                                                                                                                                                                                     ; half_band_filter_1                ; work         ;
+;          |half_band_filter_1:HALF4|                                                                                                     ; 156 (156)           ; 242 (242)                 ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4                                                                                                                                                                                                                                                                                     ; half_band_filter_1                ; work         ;
 ;             |lpm_mult:Mult0|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|lpm_mult:Mult0                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
 ;                |mult_c6t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|lpm_mult:Mult0|mult_c6t:auto_generated                                                                                                                                                                                                                                              ; mult_c6t                          ; work         ;
-;          |half_band_filter_2:HALF2|                                                                                                     ; 90 (90)             ; 154 (154)                 ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2                                                                                                                                                                                                                                                                                     ; half_band_filter_2                ; work         ;
+;          |half_band_filter_2:HALF2|                                                                                                     ; 108 (108)           ; 154 (154)                 ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2                                                                                                                                                                                                                                                                                     ; half_band_filter_2                ; work         ;
 ;             |lpm_mult:Mult0|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
 ;                |mult_0at:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0|mult_0at:auto_generated                                                                                                                                                                                                                                              ; mult_0at                          ; work         ;
 ;             |lpm_mult:Mult1|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
 ;                |mult_s9t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1|mult_s9t:auto_generated                                                                                                                                                                                                                                              ; mult_s9t                          ; work         ;
-;          |half_band_filter_2:HALF3|                                                                                                     ; 90 (90)             ; 154 (154)                 ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3                                                                                                                                                                                                                                                                                     ; half_band_filter_2                ; work         ;
+;          |half_band_filter_2:HALF3|                                                                                                     ; 108 (108)           ; 154 (154)                 ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3                                                                                                                                                                                                                                                                                     ; half_band_filter_2                ; work         ;
 ;             |lpm_mult:Mult0|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
 ;                |mult_0at:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0|mult_0at:auto_generated                                                                                                                                                                                                                                              ; mult_0at                          ; work         ;
 ;             |lpm_mult:Mult1|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult1                                                                                                                                                                                                                                                                      ; lpm_mult                          ; work         ;
@@ -418,7 +418,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |mult_76t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|lpm_mult:Mult8|mult_76t:auto_generated                                                                                                                                                                                                                                                      ; mult_76t                          ; work         ;
 ;             |lpm_mult:Mult9|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|lpm_mult:Mult9                                                                                                                                                                                                                                                                              ; lpm_mult                          ; work         ;
 ;                |mult_76t:auto_generated|                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|lpm_mult:Mult9|mult_76t:auto_generated                                                                                                                                                                                                                                                      ; mult_76t                          ; work         ;
-;          |tx_practical:TRANSMITTER|                                                                                                     ; 2447 (2447)         ; 357 (357)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER                                                                                                                                                                                                                                                                                     ; tx_practical                      ; work         ;
+;          |tx_practical:TRANSMITTER|                                                                                                     ; 2451 (2451)         ; 357 (357)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|tx_practical:TRANSMITTER                                                                                                                                                                                                                                                                                     ; tx_practical                      ; work         ;
 ;          |up_sampler_2_1:UP1|                                                                                                           ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1                                                                                                                                                                                                                                                                                           ; up_sampler_2_1                    ; work         ;
 ;          |up_sampler_2_2:UP2|                                                                                                           ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2                                                                                                                                                                                                                                                                                           ; up_sampler_2_2                    ; work         ;
 ;          |up_sampler_4:UPPER|                                                                                                           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Deliverable_4|mer_test:MER_I|comm_SUT:SUT_2|up_sampler_4:UPPER                                                                                                                                                                                                                                                                                           ; up_sampler_4                      ; work         ;
@@ -1074,7 +1074,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|b_out0a[2]               ; Stuck at VCC due to stuck port data_in                                             ;
 ; mapper_power:MAPPOW_I|ave_mult[17]                                      ; Stuck at GND due to stuck port data_in                                             ;
 ; mapper_power:MAPPOW_I|ref_level[17]                                     ; Stuck at GND due to stuck port data_in                                             ;
-; mapper_power:MAPPOW_I|sq_power[20..35]                                  ; Lost fanout                                                                        ;
 ; mer_test:MER_I|x_input[15]                                              ; Merged with mer_test:MER_I|x_input[17]                                             ;
 ; mer_test:MER_I|x_input[14]                                              ; Merged with mer_test:MER_I|x_input[16]                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|x[0][17]                 ; Merged with mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|x[0][16]                ;
@@ -1470,14 +1469,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_12[0]               ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_out[0]              ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_out_delayed[0][0]   ; Stuck at GND due to stuck port data_in                                             ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|mult_out[0]      ; Stuck at GND due to stuck port data_in                                             ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_out[0]      ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc2[0]             ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc12[0]            ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc2_delayed[0][0]  ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc12_delayed[0][0] ; Stuck at GND due to stuck port data_in                                             ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|mult_acc[0]      ; Stuck at GND due to stuck port data_in                                             ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_acc[0]      ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|b_out0a[1]               ; Merged with mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|b_out0a[0]              ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_out[34,35]          ; Merged with mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_out[33]            ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_16[34,35]           ; Merged with mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_16[33]             ;
@@ -1508,28 +1503,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; mapper_power:MAPPOW_I|sq_power[1]                                       ; Stuck at GND due to stuck port data_in                                             ;
 ; square_error:SQERR_I|sq_err[1]                                          ; Stuck at GND due to stuck port data_in                                             ;
 ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|sam_mult_count[0]        ; Merged with clk_phase[0]                                                           ;
-; Total Number of Removed Registers = 713                                 ;                                                                                    ;
+; Total Number of Removed Registers = 693                                 ;                                                                                    ;
 +-------------------------------------------------------------------------+------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                              ;
-+--------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
-; Register name                                                      ; Reason for Removal        ; Registers Removed due to This Register                                  ;
-+--------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
-; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_2[0]           ; Stuck at GND              ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc2[0],            ;
-;                                                                    ; due to stuck port data_in ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc2_delayed[0][0]  ;
-; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_12[0]          ; Stuck at GND              ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc12[0],           ;
-;                                                                    ; due to stuck port data_in ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc12_delayed[0][0] ;
-; mapper_power:MAPPOW_I|ave_mult[17]                                 ; Stuck at GND              ; mapper_power:MAPPOW_I|ref_level[17]                                     ;
-;                                                                    ; due to stuck port data_in ;                                                                         ;
-; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_out[0]         ; Stuck at GND              ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_out_delayed[0][0]   ;
-;                                                                    ; due to stuck port data_in ;                                                                         ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|mult_out[0] ; Stuck at GND              ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|mult_acc[0]      ;
-;                                                                    ; due to stuck port data_in ;                                                                         ;
-; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_out[0] ; Stuck at GND              ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|mult_acc[0]      ;
-;                                                                    ; due to stuck port data_in ;                                                                         ;
-+--------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                      ;
++------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
+; Register name                                              ; Reason for Removal        ; Registers Removed due to This Register                                  ;
++------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
+; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_2[0]   ; Stuck at GND              ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc2[0],            ;
+;                                                            ; due to stuck port data_in ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc2_delayed[0][0]  ;
+; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_12[0]  ; Stuck at GND              ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc12[0],           ;
+;                                                            ; due to stuck port data_in ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_acc12_delayed[0][0] ;
+; mapper_power:MAPPOW_I|ave_mult[17]                         ; Stuck at GND              ; mapper_power:MAPPOW_I|ref_level[17]                                     ;
+;                                                            ; due to stuck port data_in ;                                                                         ;
+; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_out[0] ; Stuck at GND              ; mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER|mult_out_delayed[0][0]   ;
+;                                                            ; due to stuck port data_in ;                                                                         ;
++------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1537,12 +1528,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 13487 ;
+; Total registers                              ; 13507 ;
 ; Number of registers using Synchronous Clear  ; 75    ;
-; Number of registers using Synchronous Load   ; 753   ;
+; Number of registers using Synchronous Load   ; 755   ;
 ; Number of registers using Asynchronous Clear ; 2195  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 5740  ;
+; Number of registers using Clock Enable       ; 5756  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1716,41 +1707,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0 ;
-+------------------------------------------------+--------------+--------------------------------------------------------+
-; Parameter Name                                 ; Value        ; Type                                                   ;
-+------------------------------------------------+--------------+--------------------------------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                             ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                           ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                           ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                         ;
-; LPM_WIDTHA                                     ; 18           ; Untyped                                                ;
-; LPM_WIDTHB                                     ; 18           ; Untyped                                                ;
-; LPM_WIDTHP                                     ; 36           ; Untyped                                                ;
-; LPM_WIDTHR                                     ; 36           ; Untyped                                                ;
-; LPM_WIDTHS                                     ; 1            ; Untyped                                                ;
-; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                                ;
-; LPM_PIPELINE                                   ; 0            ; Untyped                                                ;
-; LATENCY                                        ; 0            ; Untyped                                                ;
-; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                ;
-; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                                ;
-; USE_EAB                                        ; OFF          ; Untyped                                                ;
-; MAXIMIZE_SPEED                                 ; 6            ; Untyped                                                ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                    ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                ;
-; CBXI_PARAMETER                                 ; mult_0at     ; Untyped                                                ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                ;
-+------------------------------------------------+--------------+--------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1 ;
 +------------------------------------------------+--------------+--------------------------------------------------------+
 ; Parameter Name                                 ; Value        ; Type                                                   ;
@@ -1786,7 +1742,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0 ;
+; Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0 ;
 +------------------------------------------------+--------------+--------------------------------------------------------+
 ; Parameter Name                                 ; Value        ; Type                                                   ;
 +------------------------------------------------+--------------+--------------------------------------------------------+
@@ -1848,6 +1804,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                ;
 ; CBXI_PARAMETER                                 ; mult_s9t     ; Untyped                                                ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                ;
++------------------------------------------------+--------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+--------------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                                   ;
++------------------------------------------------+--------------+--------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                         ;
+; LPM_WIDTHA                                     ; 18           ; Untyped                                                ;
+; LPM_WIDTHB                                     ; 18           ; Untyped                                                ;
+; LPM_WIDTHP                                     ; 36           ; Untyped                                                ;
+; LPM_WIDTHR                                     ; 36           ; Untyped                                                ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                                ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                                ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                                ;
+; LATENCY                                        ; 0            ; Untyped                                                ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                                ;
+; USE_EAB                                        ; OFF          ; Untyped                                                ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped                                                ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                    ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                ;
+; CBXI_PARAMETER                                 ; mult_0at     ; Untyped                                                ;
 ; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                ;
@@ -2572,17 +2563,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                  ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
-; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 18                                                                    ;
-;     -- LPM_WIDTHB                     ; 18                                                                    ;
-;     -- LPM_WIDTHP                     ; 36                                                                    ;
-;     -- LPM_REPRESENTATION             ; SIGNED                                                                ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                                    ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                                                   ;
-;     -- USE_EAB                        ; OFF                                                                   ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                  ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
 ; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1 ;
 ;     -- LPM_WIDTHA                     ; 18                                                                    ;
 ;     -- LPM_WIDTHB                     ; 16                                                                    ;
@@ -2594,7 +2574,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                  ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
-; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0 ;
+; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 18                                                                    ;
 ;     -- LPM_WIDTHB                     ; 18                                                                    ;
 ;     -- LPM_WIDTHP                     ; 36                                                                    ;
@@ -2609,6 +2589,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- LPM_WIDTHA                     ; 18                                                                    ;
 ;     -- LPM_WIDTHB                     ; 16                                                                    ;
 ;     -- LPM_WIDTHP                     ; 34                                                                    ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                                ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                                   ;
+;     -- USE_EAB                        ; OFF                                                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                    ;
+; Entity Instance                       ; mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 18                                                                    ;
+;     -- LPM_WIDTHB                     ; 18                                                                    ;
+;     -- LPM_WIDTHP                     ; 36                                                                    ;
 ;     -- LPM_REPRESENTATION             ; SIGNED                                                                ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO                                                                    ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES                                                                   ;
@@ -2864,14 +2855,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mapper_power:MAPPOW_Q"                                                                                                                   ;
-+--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                                                                          ;
-+--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
-; mapper_power ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; ref_level    ; Output ; Warning  ; Output or bidir port (36 bits) is wider than the port expression (18 bits) it drives; bit(s) "ref_level[35..18]" have no fanouts ;
-+--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mapper_power:MAPPOW_Q"                                                                                                                      ;
++--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; mapper_power ; Output ; Warning  ; Output or bidir port (36 bits) is wider than the port expression (18 bits) it drives; bit(s) "mapper_power[35..18]" have no fanouts ;
+; mapper_power ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                 ;
++--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -2940,14 +2931,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mapper_power:MAPPOW_I"                                                                                                                   ;
-+--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                                                                          ;
-+--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
-; mapper_power ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
-; ref_level    ; Output ; Warning  ; Output or bidir port (36 bits) is wider than the port expression (18 bits) it drives; bit(s) "ref_level[35..18]" have no fanouts ;
-+--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mapper_power:MAPPOW_I"                                                                                                                      ;
++--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; mapper_power ; Output ; Warning  ; Output or bidir port (36 bits) is wider than the port expression (18 bits) it drives; bit(s) "mapper_power[35..18]" have no fanouts ;
+; mapper_power ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                 ;
++--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -2982,30 +2973,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 507                         ;
-; cycloneiii_ff         ; 6943                        ;
-;     ENA               ; 3844                        ;
+; boundary_port         ; 525                         ;
+; cycloneiii_ff         ; 6963                        ;
+;     ENA               ; 3860                        ;
 ;     ENA SCLR          ; 23                          ;
 ;     ENA SLD           ; 38                          ;
 ;     SCLR              ; 4                           ;
-;     SLD               ; 644                         ;
-;     plain             ; 2390                        ;
-; cycloneiii_lcell_comb ; 6302                        ;
-;     arith             ; 3580                        ;
+;     SLD               ; 646                         ;
+;     plain             ; 2392                        ;
+; cycloneiii_lcell_comb ; 6426                        ;
+;     arith             ; 3694                        ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 112                         ;
-;         3 data inputs ; 3467                        ;
-;     normal            ; 2722                        ;
-;         0 data inputs ; 6                           ;
+;         2 data inputs ; 116                         ;
+;         3 data inputs ; 3577                        ;
+;     normal            ; 2732                        ;
+;         0 data inputs ; 9                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 379                         ;
-;         3 data inputs ; 381                         ;
-;         4 data inputs ; 1948                        ;
+;         2 data inputs ; 388                         ;
+;         3 data inputs ; 383                         ;
+;         4 data inputs ; 1944                        ;
 ; cycloneiii_mac_mult   ; 25                          ;
 ; cycloneiii_mac_out    ; 25                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.50                       ;
-; Average LUT depth     ; 4.73                        ;
+; Average LUT depth     ; 4.74                        ;
 +-----------------------+-----------------------------+
 
 
@@ -3014,7 +3005,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -3024,78 +3015,78 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                                            ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                                               ; Details                                                                                                                                                        ;
 +-----------------------------------------------------------------+---------------+-----------+--------------------------------+-------------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; clk                                                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; clk                                                             ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[0]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~0                                    ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[0]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~0                                    ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[10]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~20                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[10]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~20                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[11]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~22                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[11]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~22                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[12]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~24                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[12]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~24                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[13]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~26                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[13]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~26                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[14]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~28                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[14]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~28                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[15]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~30                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[15]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~30                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[16]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~32                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[16]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~32                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[17]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~34                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[17]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~34                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[18]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[18]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[19]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[19]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[1]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~2                                    ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[1]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~2                                    ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[20]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[20]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[21]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[21]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[22]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[22]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[23]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[23]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[24]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[24]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[25]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[25]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[26]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[26]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[27]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[27]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[28]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[28]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[29]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[29]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[2]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~4                                    ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[2]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~4                                    ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[30]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[30]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[31]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[31]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[32]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[32]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[33]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[33]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[34]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[34]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[35]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[35]                          ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                             ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; mapper_power:MAPPOW_I|mapper_power[3]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~6                                    ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[3]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~6                                    ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[4]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~8                                    ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[4]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~8                                    ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[5]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~10                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[5]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~10                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[6]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~12                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[6]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~12                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[7]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~14                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[7]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~14                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[8]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~16                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[8]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~16                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[9]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~18                                   ; N/A                                                                                                                                                            ;
-; mapper_power:MAPPOW_I|mapper_power[9]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|Add1~18                                   ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[0]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[0]~0                         ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[0]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[0]~0                         ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[10]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[10]~20                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[10]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[10]~20                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[11]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[11]~22                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[11]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[11]~22                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[12]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[12]~24                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[12]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[12]~24                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[13]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[13]~26                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[13]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[13]~26                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[14]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[14]~28                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[14]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[14]~28                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[15]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[15]~30                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[15]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[15]~30                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[16]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[16]~32                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[16]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[16]~32                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[17]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[17]~34                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[17]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[17]~34                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[18]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[18]~36                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[18]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[18]~36                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[19]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[19]~38                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[19]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[19]~38                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[1]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[1]~2                         ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[1]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[1]~2                         ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[20]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[20]~40                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[20]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[20]~40                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[21]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[21]~42                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[21]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[21]~42                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[22]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[22]~44                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[22]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[22]~44                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[23]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[23]~46                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[23]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[23]~46                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[24]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[24]~48                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[24]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[24]~48                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[25]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[25]~50                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[25]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[25]~50                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[26]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[26]~52                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[26]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[26]~52                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[27]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[27]~54                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[27]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[27]~54                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[28]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[28]~56                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[28]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[28]~56                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[29]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[29]~58                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[29]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[29]~58                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[2]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[2]~4                         ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[2]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[2]~4                         ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[30]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[30]~60                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[30]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[30]~60                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[31]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[31]~62                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[31]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[31]~62                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[32]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[32]~64                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[32]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[32]~64                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[33]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[33]~66                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[33]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[33]~66                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[34]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[34]~68                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[34]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[34]~68                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[35]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[35]~70                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[35]                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[35]~70                       ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[3]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[3]~6                         ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[3]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[3]~6                         ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[4]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[4]~8                         ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[4]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[4]~8                         ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[5]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[5]~10                        ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[5]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[5]~10                        ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[6]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[6]~12                        ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[6]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[6]~12                        ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[7]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[7]~14                        ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[7]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[7]~14                        ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[8]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[8]~16                        ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[8]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[8]~16                        ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[9]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[9]~18                        ; N/A                                                                                                                                                            ;
+; mapper_power:MAPPOW_I|mapper_power[9]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|mapper_power[9]~18                        ; N/A                                                                                                                                                            ;
 ; mapper_power:MAPPOW_I|ref_level[0]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|sq_power[0]                               ; N/A                                                                                                                                                            ;
 ; mapper_power:MAPPOW_I|ref_level[0]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|sq_power[0]                               ; N/A                                                                                                                                                            ;
 ; mapper_power:MAPPOW_I|ref_level[10]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mapper_power:MAPPOW_I|ref_level[10]                             ; N/A                                                                                                                                                            ;
@@ -4085,7 +4076,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Standard Edition
-    Info: Processing started: Thu Mar 21 16:57:26 2024
+    Info: Processing started: Fri Mar 22 12:39:41 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Deliverable_4 -c Deliverable_4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -4135,7 +4126,6 @@ Info (12127): Elaborating entity "Deliverable_4" for the top level hierarchy
 Info (12128): Elaborating entity "square_error" for hierarchy "square_error:SQERR_I" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/Deliverable_4.v Line: 84
 Info (12128): Elaborating entity "dc_error" for hierarchy "dc_error:DCERR_I" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/Deliverable_4.v Line: 91
 Info (12128): Elaborating entity "mapper_power" for hierarchy "mapper_power:MAPPOW_I" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/Deliverable_4.v Line: 100
-Warning (10230): Verilog HDL assignment warning at mapper_power.v(34): truncated value with size 36 to match size of target (18) File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/mapper_power.v Line: 34
 Info (12128): Elaborating entity "mer_test" for hierarchy "mer_test:MER_I" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/Deliverable_4.v Line: 117
 Warning (10230): Verilog HDL assignment warning at mer_test.v(54): truncated value with size 18 to match size of target (2) File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/mer_test.v Line: 54
 Info (12128): Elaborating entity "lfsr" for hierarchy "mer_test:MER_I|lfsr:SUT" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/mer_test.v Line: 112
@@ -4168,13 +4158,13 @@ Info (12128): Elaborating entity "tx_practical" for hierarchy "mer_test:MER_I|co
 Info (12128): Elaborating entity "up_sampler_2_1" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_1:UP1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 72
 Warning (10036): Verilog HDL or VHDL warning at up_sampler_2_1.v(11): object "sampler" assigned a value but never read File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/up_sampler_2_1.v Line: 11
 Info (12128): Elaborating entity "half_band_filter_1" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 80
-Info (12128): Elaborating entity "up_sampler_2_2" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 89
+Info (12128): Elaborating entity "up_sampler_2_2" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|up_sampler_2_2:UP2" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 91
 Warning (10036): Verilog HDL or VHDL warning at up_sampler_2_2.v(11): object "sampler" assigned a value but never read File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/up_sampler_2_2.v Line: 11
-Info (12128): Elaborating entity "half_band_filter_2" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 96
-Info (12128): Elaborating entity "down_sampler_2_1" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 111
-Info (12128): Elaborating entity "down_sampler_2_2" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 132
-Info (12128): Elaborating entity "rx_red2" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 143
-Info (12128): Elaborating entity "down_sampler_4" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_4:DOWNER" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 152
+Info (12128): Elaborating entity "half_band_filter_2" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 98
+Info (12128): Elaborating entity "down_sampler_2_1" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_1:DOWN1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 113
+Info (12128): Elaborating entity "down_sampler_2_2" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_2_2:DOWN2" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 134
+Info (12128): Elaborating entity "rx_red2" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|rx_red2:RECEIVER" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 145
+Info (12128): Elaborating entity "down_sampler_4" for hierarchy "mer_test:MER_I|comm_SUT:SUT_2|down_sampler_4:DOWNER" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 154
 Info (12128): Elaborating entity "slicer" for hierarchy "mer_test:MER_I|slicer:SLIC" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/mer_test.v Line: 134
 Warning (10240): Verilog HDL Always Construct warning at slicer.v(12): inferring latch(es) for variable "slice_out", which holds its previous value in one or more paths through the always construct File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/slicer.v Line: 12
 Info (10041): Inferred latch for "slice_out[0]" at slicer.v(12) File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/slicer.v Line: 12
@@ -4279,7 +4269,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/cmpr_ngc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.03.21.16:57:39 Progress: Loading sld4f823103/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.03.22.12:39:56 Progress: Loading sld4f823103/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -4304,10 +4294,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/ip/sld4f823103/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (278001): Inferred 25 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mapper_power:MAPPOW_I|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/mapper_power.v Line: 26
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|Mult1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|Mult1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF3|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "square_error:SQERR_I|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/square_error.v Line: 17
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF1|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_1.v Line: 51
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_1:HALF4|Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_1.v Line: 51
@@ -4341,19 +4331,6 @@ Info (12133): Instantiated megafunction "mapper_power:MAPPOW_I|lpm_mult:Mult0" w
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_c6t.tdf
     Info (12023): Found entity 1: mult_c6t File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_c6t.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
-Info (12133): Instantiated megafunction "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0" with the following parameter: File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
-    Info (12134): Parameter "LPM_WIDTHA" = "18"
-    Info (12134): Parameter "LPM_WIDTHB" = "18"
-    Info (12134): Parameter "LPM_WIDTHP" = "36"
-    Info (12134): Parameter "LPM_WIDTHR" = "36"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_0at.tdf
-    Info (12023): Found entity 1: mult_0at File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_0at.tdf Line: 29
 Info (12130): Elaborated megafunction instantiation "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
 Info (12133): Instantiated megafunction "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult1" with the following parameter: File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 34
     Info (12134): Parameter "LPM_WIDTHA" = "18"
@@ -4367,6 +4344,19 @@ Info (12133): Instantiated megafunction "mer_test:MER_I|comm_SUT:SUT_2|half_band
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_s9t.tdf
     Info (12023): Found entity 1: mult_s9t File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_s9t.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
+Info (12133): Instantiated megafunction "mer_test:MER_I|comm_SUT:SUT_2|half_band_filter_2:HALF2|lpm_mult:Mult0" with the following parameter: File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/half_band_filter_2.v Line: 31
+    Info (12134): Parameter "LPM_WIDTHA" = "18"
+    Info (12134): Parameter "LPM_WIDTHB" = "18"
+    Info (12134): Parameter "LPM_WIDTHP" = "36"
+    Info (12134): Parameter "LPM_WIDTHR" = "36"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_0at.tdf
+    Info (12023): Found entity 1: mult_0at File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/db/mult_0at.tdf Line: 29
 Info (12130): Elaborated megafunction instantiation "square_error:SQERR_I|lpm_mult:Mult0" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/square_error.v Line: 17
 Info (12133): Instantiated megafunction "square_error:SQERR_I|lpm_mult:Mult0" with the following parameter: File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/square_error.v Line: 17
     Info (12134): Parameter "LPM_WIDTHA" = "18"
@@ -4621,9 +4611,8 @@ Warning (13012): Latch mer_test:MER_I|comm_SUT:SUT_2|rx[8] has unsafe behavior F
 Warning (13012): Latch mer_test:MER_I|comm_SUT:SUT_2|rx[9] has unsafe behavior File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/comm_SUT.v Line: 35
     Warning (13013): Ports D and ENA on the latch are fed by the same signal PHYS_SW[2] File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/Deliverable_4.v Line: 4
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/output_files/Deliverable_4.map.smsg
-Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 981 of its 1053 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 72 missing sources or connections.
+Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 1017 of its 1053 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 36 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
@@ -4631,17 +4620,17 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "PHYS_KEY[2]" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/Deliverable_4.v Line: 3
     Warning (15610): No output dependent on input pin "PHYS_KEY[3]" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/Deliverable_4.v Line: 3
     Warning (15610): No output dependent on input pin "PHYS_SW[3]" File: /home/.engr-ece/nrp211/Documents/Deliverable_4/Deliverable_4/Deliverable_4.v Line: 4
-Info (21057): Implemented 18905 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 19047 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 18308 logic cells
+    Info (21061): Implemented 18450 logic cells
     Info (21064): Implemented 510 RAM segments
     Info (21062): Implemented 50 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 132 warnings
-    Info: Peak virtual memory: 953 megabytes
-    Info: Processing ended: Thu Mar 21 16:57:54 2024
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:44
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 131 warnings
+    Info: Peak virtual memory: 980 megabytes
+    Info: Processing ended: Fri Mar 22 12:40:14 2024
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:55
 
 
 +------------------------------------------+
