@@ -15,17 +15,17 @@ for M = 8
 
 lpf = 2.*1/4.*sinc(2.*1/4.*(n-M/2));
 w2 = kaiser(M+1,bet);
-upconv = lpf.*w2';
-h1 = conv(upsample(hsrrc_tx,2)/2,upconv);
+upconv = lpf.*w2'*1.375;
+h1 = conv(upsample(hsrrc_tx,2),upconv);
 figure(1)
 freqz(h1)
-h2 = conv(upsample(h1,2)/2,upconv);
+h2 = conv(upsample(h1,2),upconv);
 figure(2)
 freqz(h2)
-h3 = conv(h2/2,upconv);
+h3 = conv(h2,upconv);
 figure(3)
 freqz(h3)
-h4 = conv(downsample(h3,2)/2,upconv);
+h4 = conv(downsample(h3,2),upconv);
 figure(4)
 freqz(h4)
 h_d = conv(downsample(h4,2),hsrrc_rx);

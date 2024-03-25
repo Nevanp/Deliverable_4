@@ -4,6 +4,142 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "DAC_DA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_DB[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_CLK_A",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_CLK_B",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_CLK_A",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_CLK_B",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_WRT_A",
+					"strict" : false
+				},
+				{
+					"name" : "DAC_WRT_B",
+					"strict" : false
+				},
+				{
 					"name" : "counter[0]",
 					"strict" : false
 				},
@@ -96,11 +232,123 @@
 					"strict" : false
 				},
 				{
-					"name" : "PHYS_KEY[0]",
+					"name" : "ADC_DA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DB[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DA[13]",
 					"strict" : false
 				},
 				{
 					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "PHYS_KEY[0]",
 					"strict" : false
 				},
 				{

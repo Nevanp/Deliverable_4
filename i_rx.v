@@ -1,4 +1,4 @@
-module comm_SUT(
+module i_rx(
     input clk,
     input clk_50,
     input clear_accum,
@@ -11,7 +11,7 @@ module comm_SUT(
     output reg signed [17:0] data_out
 );
 wire signed [17:0] data_up, tx_data, rx_data, data_down, tx_data1;
-reg signed [17:0] delayed_rx1, delayed_rx2,delayed_rx3,delayed_rx4, rx;
+reg signed [17:0] delayed_rx1, delayed_rx2,delayed_rx3,delayed_rx4, rx, delayed_in;
 always @ *
 data_out <= data_down;
 
@@ -43,11 +43,13 @@ endcase
 // instantiate Parts of SUT
 
 wire signed [17:0] up1,half1,up2,half2,down1,half3,down2,half4;
+always @ (posedge clk)
+delayed_in <= data_in;
 
 half_band_filter_2 HALF3(
     .clk(clk),
     .reset(reset),
-    .x_in(data_in),
+    .x_in(delayed_in),
     .y(half3)
 );
 
@@ -76,7 +78,7 @@ down_sampler_2_2 DOWN2(
     .clk(clk),
     .reset(reset),
     .clk_en(sam_clk),
-    .x_in(half4_delay),
+    .x_in(half4),
     .y(down2)
 );
 

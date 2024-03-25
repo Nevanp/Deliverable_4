@@ -2,8 +2,75 @@ module Deliverable_4(
 			input CLOCK_50,
 			input [3:0]PHYS_KEY,
 			input [3:0]PHYS_SW,
+			input [13:0]ADC_DA,
+			input [13:0]ADC_DB,
+			output reg[13:0]DAC_DA,
+			output reg [13:0]DAC_DB,
+			output	ADC_CLK_A,
+			output	ADC_CLK_B,
+			output	ADC_OEB_A,
+			output	ADC_OEB_B,
+			output	DAC_CLK_A,
+			output	DAC_CLK_B,
+			output	DAC_MODE,
+			output	DAC_WRT_A,
+			output	DAC_WRT_B,
 			output reg [22:0] counter
 			 );
+/// DAC STUFF
+
+	   (* noprune *)reg [13:0] registered_ADC_A;
+		(* noprune *)reg [13:0] registered_ADC_B;
+					
+					assign DAC_CLK_A = clk;
+					assign DAC_CLK_B = clk;
+					
+					
+					assign DAC_MODE = 1'b1; //treat DACs seperately
+					
+					assign DAC_WRT_A = ~clk;
+					assign DAC_WRT_B = ~clk;
+					
+					//always@ (posedge clk)// make DAC A echo ADC A
+					//DAC_DA = registered_ADC_A[13:0];
+						
+						
+
+//  End DAC setup
+//************************	
+					
+// ************************
+//		 Setup ADCs
+					
+					assign ADC_CLK_A = clk;
+					assign ADC_CLK_B = clk;
+					
+					assign ADC_OEB_A = 1'b1;
+					assign ADC_OEB_B = 1'b1;
+
+					
+					always@ (posedge clk)
+						registered_ADC_A <= ADC_DA;
+						
+					always@ (posedge clk)
+						registered_ADC_B <= ADC_DB;
+
+reg signed [13:0] signal_to_DAC;
+
+
+		always@ (posedge clk)// convert 1s13 format to 0u14
+								//format and send it to DAC A
+		DAC_DA = {~signal_to_DAC[13],
+						signal_to_DAC[12:0]};		
+always@ (posedge clk) // DAC B is not used in this
+					 // lab so makes it the same as DAC A
+				 
+			DAC_DB = {~signal_to_DAC[13],
+						signal_to_DAC[12:0]} ;	
+			/*  End DAC setup
+			************************/
+always @ *
+signal_to_DAC <= upconv_out[17:4];
 
 reg clk, clk_smp,clk_sym,reset,clk_int;
 reg [3:0] clk_phase;
@@ -88,20 +155,22 @@ reg [3:0] input_to_mapper;
 always @ *
 input_to_mapper <= lfsr_test[3:0];
 // Mapper i
+
+
 always @ (*)
 case(input_to_mapper[1:0])
-2'b00: x_in <= -18'sd131072;
-2'b01: x_in <= -18'sd43691;
-2'b11: x_in <= 18'sd43690;
-2'b10: x_in <= 18'sd131071;
+2'b00: x_in_i <= -18'sd131072;
+2'b01: x_in_i <= -18'sd43691;
+2'b11: x_in_i <= 18'sd43690;
+2'b10: x_in_i <= 18'sd131071;
 endcase
 // Mapper q
 always @ (*)
 case(input_to_mapper[3:2])
-2'b00: x_in <= -18'sd131072;
-2'b01: x_in <= -18'sd43691;
-2'b11: x_in <= 18'sd43690;
-2'b10: x_in <= 18'sd131071;
+2'b00: x_in_q <= -18'sd131072;
+2'b01: x_in_q <= -18'sd43691;
+2'b11: x_in_q <= 18'sd43690;
+2'b10: x_in_q <= 18'sd131071;
 endcase
 
 always @ (posedge clk)
@@ -139,7 +208,7 @@ q_tx TXQ(
     .sym_clk(clk_sym),
 	 .sam_clk(clk_smp),
     .reset(reset),
-    .data_in(x_input_q),
+    .data_in(18'sd0),
     .data_out(tx_out_q)
 );
 /// NCO Deal
@@ -151,16 +220,41 @@ up_counter <= 1'b0;
 else
 up_counter <= up_counter + 1'b1;
 
-
+always @ (posedge clk)
+ch_delay_i <= tx_out_i;
 always @ *
 case(up_counter)
-2'd0: upconv_out <= tx_out_i;
+2'd0: upconv_out <= ch_delay_i;
 2'd1: upconv_out <= -tx_out_q;
-2'd2: upconv_out <= -tx_out_i;
+2'd2: upconv_out <= -ch_delay_i;
 2'd3: upconv_out <= tx_out_q;
 endcase
 
+
+wire signed [17:0] ch_out;
+
 ///Channel
+channel CH(
+	.clk(clk),
+	.x_in(upconv_out<<<1),
+	.y(ch_out)
+);
+
+/// De-NCO deal
+reg signed [17:0] down_i,down_q,ch_delay_i;
+always @ *
+case(up_counter)
+2'd0: down_i <= ch_out;
+2'd2: down_i <= -ch_out;
+default: down_i <= 18'sd0;
+endcase
+always @ *
+case(up_counter)
+2'd1: down_q <= -ch_out;
+2'd3: down_q <= ch_out;
+default: down_q <= down_q;
+endcase
+
 
 ///iRX
 i_rx RXI(
@@ -168,11 +262,11 @@ i_rx RXI(
     .clk_50(clk_50),
     .clk_int(clk_int),
     .clear_accum(clear_accum_i),
-	 .sw(sw),
+	 .sw(PHYS_SW),
     .sym_clk(clk_sym),
 	 .sam_clk(clk_smp),
     .reset(reset),
-    .data_in(x_input),
+    .data_in(down_i),
     .data_out(dec_var_i)
 );
 ///qRX
@@ -181,11 +275,11 @@ q_rx RXQ(
     .clk_50(clk_50),
     .clk_int(clk_int),
     .clear_accum(clear_accum_i),
-	 .sw(sw),
+	 .sw(PHYS_SW),
     .sym_clk(clk_sym),
 	 .sam_clk(clk_smp),
     .reset(reset),
-    .data_in(x_input),
+    .data_in(down_q),
     .data_out(dec_var_q)
 );
 
@@ -231,7 +325,7 @@ mer_test MER_I(.clk(clk),
 	//.MER_val(MER_val),
     .sym_correct(sym_correct_i),
 	.sym_error(sym_error_i),
-	.clear_accum(clear_accum_i),
+	//.clear_accum(clear_accum_i),
 	.error(err_i),
 	.dec_var(dec_var_i),
 	.slice(slicer_out_i),
@@ -248,7 +342,7 @@ mer_test MER_Q(.clk(clk),
 	//.MER_val(MER_val),
     .sym_correct(sym_correct_q),
 	.sym_error(sym_error_q),
-	.clear_accum(clear_accum_i),
+	//.clear_accum(clear_accum_i),
 	.error(err_q),
 	.dec_var(dec_var_q),
 	.slice(slicer_out_q),

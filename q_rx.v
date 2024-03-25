@@ -1,4 +1,4 @@
-module comm_SUT(
+module q_rx(
     input clk,
     input clk_50,
     input clear_accum,

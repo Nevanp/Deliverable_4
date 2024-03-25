@@ -4,5 +4,6 @@ module channel(
     output reg signed [17:0] y
 );
 
-
+always @ *
+y <= x_in;
 endmodule

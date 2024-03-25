@@ -68,7 +68,10 @@ half_band_filter_2 HALF2(
     .clk(clk),
     .reset(reset),
     .x_in(up2),
-    .y(data_out)
+    .y(data_down)
 );
+
+always @ *
+data_out <= data_down;
 
 endmodule
